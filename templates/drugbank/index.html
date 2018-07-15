@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drug DownloadBase</title>
+    {% load static %}
+	<link href={% static "drugbank/css/bootstrap.min.css" %} rel="stylesheet">
+	<link rel="stylesheet" href={% static "drugbank/css/bootstrap.min.css" %} integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src={% static "drugbank/js/bootstrap.min.js" %} integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href={% static "drugbank/css/default.css" %}>
+</head>
+<body>
+<!-- Save for Web Slices (UI界面.psd) -->
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #2e68aa" >
+		<div class="container-fluid">
+			<div class="navbar-header navbar-left">
+				<a class="navbar-brand" href="index.html">
+					<img alt="Brand" src={% static "drugbank/images/logo.png" %} height="42" width="63" style="margin-top: -0.4em; margin-left: -0.4em;">
+				</a>
+				<a class="navbar-brand" href="index.html">
+					<p style="color: #ffffff; font-size:32px; font-family: 'Frutiger LT 95 Ultra Black';"> Drug DownloadBase</p>
+				</a>
+			</div>
+			<div class="btn-group navbar-right row">
+				<button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Browse
+				</button>
+				<a href="search.html">
+				<button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Search
+				</button>
+				</a>
+				<button type="button" class="btn btn-primary dropdown-toggle menu col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Download
+				</button>
+				<button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Help
+				</button>
+				<button type="button" class="btn btn-primary dropdown-toggle menu col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Contact Us
+				</button>
+			</div>
+	</div>
+</nav>
+<div class="search container-fluid" >
+	<div class="row" style="margin-top: 1%;">
+		<p class="col-md-offset-3" style="color:#ffffff; font-family: 'Gill Sans MT'; font-size: 32px">Search for what?</p>
+	</div>
+	<div class="row">
+	<div class="row col-md-offset-3 col-md-6" style="margin-top: 1%;">
+		<div class="input-group input-group-lg col-md-offset-0 col-md-11">
+			<input type="text" class="form-control" placeholder="Search...">
+			<span class="input-group-btn">
+        <button class="btn btn-default btn-" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </span>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="container-fluid introduce">
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#" aria-controls="introduce" role="tab" data-toggle="tab">Introduce</a>
+			</li>
+			<li role="presentation">
+				<a href="#" aria-controls="aboutus" role="tab" data-toggle="tab">About Us</a>
+			</li>
+			<li role="presentation">
+				<a href="#" aria-controls="algorithm" role="tab" data-toggle="tab">Algorithm</a>
+			</li>
+			<li role="presentation">
+				<a href="#" aria-controls="joinus" role="tab" data-toggle="tab">Join us</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="introduce"><h1>Introduce</h1></div>
+			<div role="tabpanel" class="tab-pane" id="aboutus"><h2>About Us</h2></div>
+			<div role="tabpanel" class="tab-pane" id="algorithm"><h2>Algorithm</h2></div>
+			<div role="tabpanel" class="tab-pane" id="joinus"><h3>Join Us</h3></div>
+		</div>
+
+	</div>
+</div>
+<table id="__01" width="1899" height="914" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2">
+			<img src="images/UI&#x754c;&#x9762;v2.0_01.gif" width="549" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_02.gif" width="506" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_03.gif" width="171" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_04.gif" width="159" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_05.gif" width="186" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_06.gif" width="127" height="74" alt=""></td>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_07.gif" width="201" height="74" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="8">
+			<img src="images/UI&#x754c;&#x9762;v2.0_08.gif" width="1899" height="273" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_09.gif" width="364" height="98" alt=""></td>
+		<td colspan="7" rowspan="5">
+			<img src="images/UI&#x754c;&#x9762;v2.0_10.gif" width="1535" height="566" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_11.gif" width="364" height="118" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_12.gif" width="364" height="107" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_13.gif" width="364" height="103" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/UI&#x754c;&#x9762;v2.0_14.gif" width="364" height="140" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="364" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="185" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="506" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="171" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="159" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="186" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="127" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="201" height="1" alt=""></td>
+	</tr>
+</table>
+<div style="background-color: #455562;" class="myfooter">
+	<div class="container">
+		<div class="copyrights">
+			"Copyright 2018" <a href="http://www.bioinfotech.cn" onmouseover="">BBDM Lab</a>
+			", Web Server developed by Wenzheng Guo, Xujie Wang (Developer), Ruoqi Liu (Designer) and Xiang Yue (Chief)."</br>
+			"Citation: Predicting Drug-Disease Associations by using the Similarity Constrained Matrix Factorization"</br>
+			Contact：Wen Zhang <a href="mailto:zhangwen@whu.edu.cn">zhangwen@whu.edu.cn</a>
+		</div>
+	</div>
+</div>
+<!-- End Save for Web Slices -->
+</body>
+</html>

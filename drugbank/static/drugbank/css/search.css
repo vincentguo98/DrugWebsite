@@ -1,0 +1,35 @@
+.byidb
+{
+    width: 8em;
+}
+.option
+{
+    float: left;
+    font-family: "Gill Sans MT";
+    font-size: 1.2em;
+    color: black;
+}
+.selection
+{
+    background-color: #ffffff;
+    border: none;
+}
+.srcdown
+{
+    display: none;
+}
+.tablef
+{
+    background: transparent;
+    overflow: hidden;
+}
+.search2
+{
+    height: 45%;
+    background-color: #00343f;
+}
+canvas {
+    background-color: #eee;
+    position: absolute;
+    z-index: -1;
+}
