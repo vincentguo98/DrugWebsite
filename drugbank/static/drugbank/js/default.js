@@ -80,7 +80,7 @@ $(document).ready(function(){
            },
            dataType:"json",
             success:function(data){
-
+                refreshTable(data,index);
             },
             fail: function () {
                 alert("Disconnect!");
@@ -130,6 +130,8 @@ function inittable() {
             }
             return cellProperties;
         },
+         minCols: 15,
+         minRows: 30,
          maxCols: 20,
          maxRows: 1000,
          readOnly: true,
@@ -137,8 +139,19 @@ function inittable() {
     });
 }
 function refreshTable(data) {
-    var container,
-    datac = data;
+    var container,datac = new Array();
+    for( k = 0,klen = data[index[0]].length+1;k<klen;k++)
+        datac[k] = new Array();
+    datac[0] = index;
+    console.log(data[0]);
+    console.log(data[index[0]][0]);
+    console.log(data[index[0]].length);
+    for(j = 0,len=index.length; j < len; j++)
+        for(i = 1,ilen = data[index[0]].length+1;i < ilen;i++)
+            datac[i].push(data[index[j]][i]);
+
+    console.log(datac);
+    console.log(datac[0].length);
 
     function firstRowRenderer(instance, td, row, col, prop, value, cellProperties) {
         Handsontable.renderers.TextRenderer.apply(this, arguments);
@@ -152,8 +165,7 @@ function refreshTable(data) {
         data: datac,
         width: 720,
         height:650,
-        rowHeights: 25,
-        colWidths: 60,
+        autoRowSize: true,
         afterSelection: function (row, col, row2, col2) {
             var meta = this.getCellMeta(row2, col2);
 
@@ -173,9 +185,11 @@ function refreshTable(data) {
             }
             return cellProperties;
         },
-        maxCols: 20,
-        maxRows: 1000,
+        //  minCols: 12,
+        // minRows: 20,
         readOnly: true,
         manualColumnFreeze: true,
+        autoInsertRow:true,
+         // minSpareCols: 18,
     });
 }

@@ -39,7 +39,7 @@ def index(request):
 def search(request):
 	field_name = []
 	for field in Drug._meta.fields:
-		field_name.append({"field_item_name":field.verbose_name})
+		field_name.append({"field_item_name":field.verbose_name.replace(' ',"_")})
 	
 	field_dict = {"name":field_name}
 	return render(request,'drugbank/search.html',context=field_dict)
