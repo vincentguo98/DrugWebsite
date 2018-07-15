@@ -82,10 +82,10 @@
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
-                <li class="minop id-option1-list" value="0" id="min-1"><a href="#">Action</a></li>
-                <li class="minop id-option1-list" value="0" id="min-2"><a href="#">Another action</a></li>
-                <li class="minop id-option1-list" value="0" id="min-3"><a href="#">Something else here</a></li>
-                <li class="minop id-option1-list" value="0" id="min-4"><a href="#">Separated link</a></li>
+
+                {% for item in name %}
+                    <li class="minop id-option1-list" value="0" id={{ item.field_item_name }}><a href="#">{{ item.field_item_name }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="col-md-offset-1 btn-group">

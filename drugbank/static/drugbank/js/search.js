@@ -20,14 +20,22 @@ $(document).ready(function () {
             index.splice(i,1);
             console.log(index);
         }
+        drug  = {};
+        console.log(index.length)
+        for (var j = 0;j < index.length;j++){
+            drug["["+ j +"]"] = index[j];
+            console.log(drug)
+        }
+        // drug = { "drugindex":index[0]}
         $.ajax({
            type: "post",
            url: "/Drug/ProjectionResult/",
            data:{
-               'index_of_drug': index,
+             "drug":JSON.stringify(index)
            },
+           dataType:"json",
             success:function(data){
-                refreshTable(data);
+
             },
             fail: function () {
                 alert("Disconnect!");

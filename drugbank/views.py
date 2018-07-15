@@ -19,11 +19,16 @@ option = Option(projection_=["primaryDrugbankId", "name"],order_=["name","primar
 
 @csrf_exempt
 def ProjectionResult(request):
-	lis = request.POST.get("index_of_drug")
+	
+	lis = request.POST.get("drug")
+	druglist = eval(lis)
 	print(lis)
-	# query = QueryDrug(option)
-	# query.setQueryModel(Drug)
-	return HttpResponse("0")
+	option = Option(projection_ = eval(lis))
+	querydrug = QueryDrug(option)
+	querydrug.setQueryModel(Drug)
+	drug = querydrug.parse()
+	print(drug)
+	return JsonResponse(drug)
 
 @csrf_exempt
 def index(request):
@@ -32,24 +37,29 @@ def index(request):
 
 @csrf_exempt
 def search(request):
-	return render(request,'drugbank/search.html',locals())
-
-
-
-
-if __name__ == '__main__':
-	drug = Drug.objects.all()
-	drugdict = {}
-	druglist = []
-	drugorderedlist = []
-	for name in option.projection:
-		for i in drug:
-			print(eval("i."+name))
-			druglist.append(eval("i."+name))
-		drugdict[name] = druglist
-		druglist = []
-	print("-"*20)
+	field_name = []
 	for field in Drug._meta.fields:
-		print(field.verbose_name)
+		field_name.append({"field_item_name":field.verbose_name})
+	
+	field_dict = {"name":field_name}
+	return render(request,'drugbank/search.html',context=field_dict)
+
+
+
+#
+# if __name__ == '__main__':
+# 	drug = Drug.objects.all()
+# 	drugdict = {}
+# 	druglist = []
+# 	drugorderedlist = []
+# 	for name in option.projection:
+# 		for i in drug:
+# 			print(eval("i."+name))
+# 			druglist.append(eval("i."+name))
+# 		drugdict[name] = druglist
+# 		druglist = []
+# 	print("-"*20)
+# 	for field in Drug._meta.fields:
+# 		print(field.verbose_name)
 	
 	

@@ -72,6 +72,21 @@ $(document).ready(function(){
                 }
             }
         }
+         $.ajax({
+           type: "post",
+           url: "/Drug/ProjectionResult/",
+           data:{
+             "drug":JSON.stringify(index)
+           },
+           dataType:"json",
+            success:function(data){
+
+            },
+            fail: function () {
+                alert("Disconnect!");
+            },
+        });
+
         //state = !state;
     });
 });
