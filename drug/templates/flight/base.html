@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="csrf-token" content="{{ csrf_token}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> {% comment %}
+  <link rel="icon" href="favicon.ico" /> {% endcomment %}
+  <!--jquery库-->
+  <script src="{% static 'flight/js/jquery.min.js' %}"></script>
+  <!--bootstrap库-->
+  <link href="{% static 'flight/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <script src="{% static 'flight/js/bootstrap/bootstrap.min.js' %}"></script>
+  <!--[if lt IE 9]>
+      <script src="js/bootstrap/html5shiv.min.js"></script>
+      <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+  <!--font-awesome字体库-->
+  <link href="{% static 'flight/css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!--页面加载进度条-->
+  <link href="{% static 'flight/css/pace/dataurl.css' %}" rel="stylesheet" />
+  <script src="{% static 'flight/js/pace/pace.min.js' %}"></script>
+  <!--jquery.hammer手势插件-->
+  <script src="{% static 'flight/js/jquery.hammer/hammer.min.js' %}"></script>
+  <script src="{% static 'flight/js/jquery.hammer/jquery.hammer.js' %}"></script>
+  <!--平滑滚动到顶部库-->
+  <script src="{% static 'flight/js/jquery.scrolltopcontrol/scrolltopcontrol.js' %}" type="text/javascript"></script>
+  <!--主要写的jquery拓展方法-->
+  <script src="{% static 'flight/js/jquery.extend.js' %}" type="text/javascript"></script>
+  <!--主要写的css代码-->
+  <link href="{% static 'flight/css/default.css' %}" rel="stylesheet" type="text/css" />
+  <!--主要写的js代码-->
+  <script src="{% static 'flight/js/default.js' %}" type="text/javascript"></script>
+  <link href="{% static 'flight/css/base.css' %}" rel="stylesheet" type="text/css" />
+  <!-- sweetalert插件 -->
+  <script src="{% static 'flight/js/sweet-alert.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'flight/css/sweet-alert.css' %}"> {% block css %} {% endblock css %}
+  <title>{% block title %} {% endblock title%}</title>
+</head>
+
+<body>
+  {% block content %}{% endblock content %}
+  <script>
+    $.ajaxSetup({
+      headers: {
+        "X-CSRFToken": '{{ csrf_token }}'
+      }
+    });
+  </script>
+  {% block js %} {% endblock js %}</body>
+
+</html>
