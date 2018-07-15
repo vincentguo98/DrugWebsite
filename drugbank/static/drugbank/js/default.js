@@ -37,6 +37,15 @@ $(document).ready(function(){
                 borderColor: "#5cb85c",
                 color: "#fff",
             },"fast");
+            var arr = document.getElementsByClassName(id+"-list");
+            for(var j = 0,len=arr.length; j < len; j++) {
+                if(arr[j].value == "0"){
+                    arr[j].value = "1";
+                    index.push(arr[j].id);
+                    var a1 = arr[j].firstChild;
+                    a1.innerHTML += "<span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>";
+                }
+            }
         }
         else
         {
@@ -52,6 +61,16 @@ $(document).ready(function(){
                 color: "#fff",
                 value: "1",
             }, "fast" );
+            var arr2 = document.getElementsByClassName(id+"-list");
+            for(var j = 0,len=arr2.length; j < len; j++) {
+                if(arr2[j].value == "1"){
+                    arr2[j].value = "0";
+                    var a2 = arr2[j].firstChild;
+                    a2.innerHTML = a2.innerText;
+                    var i = index.indexOf(arr2[j].id);
+                    index.splice(i,1);
+                }
+            }
         }
         //state = !state;
     });
