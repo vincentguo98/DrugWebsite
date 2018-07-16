@@ -35,7 +35,9 @@ $(document).ready(function () {
            },
            dataType:"json",
             success:function(data){
-
+               console.log(index[0])
+                console.log(data[index[0]]);
+                refreshTable(data,index);
             },
             fail: function () {
                 alert("Disconnect!");
