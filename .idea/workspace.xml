@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d3def47-146a-424f-b2db-6646df417950" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/drugdatabase.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drugbank/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DrugWebsite/settings.py" afterPath="$PROJECT_DIR$/DrugWebsite/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DrugWebsite/urls.py" afterPath="$PROJECT_DIR$/DrugWebsite/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,6 +35,12 @@
         <item name="db" type="e3449647:DbNodeDescriptor" />
         <item name="main" type="e3449647:DbNodeDescriptor" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
+        <item name="drugbank_drug" type="e3449647:DbNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
@@ -56,15 +48,33 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6797804">
+    <splitter split-orientation="horizontal" split-proportion="0.53420806">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-                  <folding />
+                  <caret line="58" column="55" lean-forward="false" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+                  <folding>
+                    <marker date="1531660481000" expanded="true" signature="883:1113" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="1130:1527" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="1578:2083" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="1584:2080" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="1757:2073" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="1793:2062" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2138:2212" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2227:2353" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2244:2351" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2357:2457" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2487:2881" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2493:2590" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2598:2685" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2693:2781" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2789:2878" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="2885:2960" ph="..." />
+                    <marker date="1531660481000" expanded="true" signature="3056:3156" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -72,8 +82,8 @@
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding>
                     <element signature="e#635#667#0" expanded="true" />
                   </folding>
@@ -93,59 +103,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drugbank/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5175">
-                  <caret line="346" column="0" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drugbank/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
-                  <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#114#149#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="search_class.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/search_class.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="21" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                    <marker date="1531648391000" expanded="true" signature="922:1027" ph="..." />
-                    <marker date="1531648391000" expanded="true" signature="2102:2104" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-8">
-                  <caret line="91" column="65" lean-forward="true" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
+                <state relative-caret-position="626">
+                  <caret line="98" column="9" lean-forward="false" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
                   <folding>
                     <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -157,13 +119,42 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="default.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+                  <folding>
+                    <marker date="1531727298000" expanded="true" signature="28:2645" ph="{...}" />
+                    <marker date="1531727298000" expanded="true" signature="632:2645" ph="{...}" />
+                    <marker date="1531727298000" expanded="true" signature="2437:2645" ph="{&quot;type&quot;: &quot;post&quot;...}" />
+                    <marker date="1531727298000" expanded="true" signature="2643:2645" ph="{...}" />
+                    <marker date="1531727298000" expanded="true" signature="5904:5911" ph="{&quot;data&quot;: datac...}" />
+                    <marker date="1531727298000" expanded="true" signature="5904:5915" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/drugbank/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-1782">
-                  <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+                  <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
                   <folding>
                     <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/drugbank/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#114#149#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -173,15 +164,48 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="search_class.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="search_class.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/search_class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="283">
-                  <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+                <state relative-caret-position="258">
+                  <caret line="139" column="20" lean-forward="false" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                     <marker date="1531648391000" expanded="true" signature="922:1027" ph="..." />
                     <marker date="1531648391000" expanded="true" signature="2102:2104" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="356">
+                  <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+                  <folding>
+                    <marker date="1531727298000" expanded="true" signature="1139:1278" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="drugbank_drug" pinned="false" current-in-tab="false">
+            <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_drug">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/drugbank/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="212">
+                  <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -223,13 +247,14 @@
         <option value="$PROJECT_DIR$/drugbank/migrations/test_database.py" />
         <option value="$PROJECT_DIR$/drugbank/drugdatabase.py" />
         <option value="$PROJECT_DIR$/search_class.py" />
-        <option value="$PROJECT_DIR$/DrugWebsite/urls.py" />
         <option value="$PROJECT_DIR$/DrugWebsite/settings.py" />
         <option value="$PROJECT_DIR$/drugbank/urls.py" />
         <option value="$PROJECT_DIR$/templates/drugbank/index.html" />
+        <option value="$PROJECT_DIR$/DrugWebsite/urls.py" />
+        <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/default.js" />
         <option value="$PROJECT_DIR$/templates/drugbank/search.html" />
-        <option value="$PROJECT_DIR$/drugbank/views.py" />
         <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/search.js" />
+        <option value="$PROJECT_DIR$/drugbank/views.py" />
       </list>
     </option>
   </component>
@@ -247,8 +272,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="1280" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -323,7 +349,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -480,18 +506,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="1280" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16640624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3503597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08320312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -500,7 +526,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -532,25 +557,35 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drugbank/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#114#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1531660481000" expanded="true" signature="883:1113" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1130:1527" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1578:2083" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1584:2080" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1757:2073" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1793:2062" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2138:2212" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2227:2353" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2244:2351" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2357:2457" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2487:2881" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2493:2590" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2598:2685" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2693:2781" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2789:2878" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2885:2960" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="3056:3156" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -678,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_druginteraction">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_dosage">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -735,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_drug">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drugbank/migrations/test_database.py" />
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/django/apps/registry.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -765,32 +786,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Drug_DownloadBase/.idea/misc.xml" />
-    <entry file="file://$PROJECT_DIR$/drugbank/models.py">
+    <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5175">
-          <caret line="346" column="0" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="58" column="55" lean-forward="false" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531660481000" expanded="true" signature="883:1113" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1130:1527" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1578:2083" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1584:2080" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1757:2073" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="1793:2062" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2138:2212" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2227:2353" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2244:2351" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2357:2457" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2487:2881" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2493:2590" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2598:2685" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2693:2781" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2789:2878" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="2885:2960" ph="..." />
+            <marker date="1531660481000" expanded="true" signature="3056:3156" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/search.html" />
-    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -809,35 +831,78 @@
     <entry file="file://$PROJECT_DIR$/templates/drugbank/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1782">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_druginteraction">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="91" column="65" lean-forward="true" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#635#667#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="5471" column="89" lean-forward="true" selection-start-line="5471" selection-start-column="89" selection-end-line="5471" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <marker date="1531727298000" expanded="true" signature="28:2645" ph="{...}" />
+            <marker date="1531727298000" expanded="true" signature="632:2645" ph="{...}" />
+            <marker date="1531727298000" expanded="true" signature="2437:2645" ph="{&quot;type&quot;: &quot;post&quot;...}" />
+            <marker date="1531727298000" expanded="true" signature="2643:2645" ph="{...}" />
+            <marker date="1531727298000" expanded="true" signature="5904:5911" ph="{&quot;data&quot;: datac...}" />
+            <marker date="1531727298000" expanded="true" signature="5904:5915" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_drug">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="139" column="20" lean-forward="false" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="36" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1531648391000" expanded="true" signature="922:1027" ph="..." />
             <marker date="1531648391000" expanded="true" signature="2102:2104" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <marker date="1531727298000" expanded="true" signature="1139:1278" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -852,31 +917,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="626">
+          <caret line="98" column="9" lean-forward="false" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
           <folding>
-            <element signature="e#635#667#0" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drugbank/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="e#114#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
+    <entry file="file://$PROJECT_DIR$/drugbank/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="212">
+          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
