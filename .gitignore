@@ -8,6 +8,10 @@
 *.pyc
 *.pyc
 *.iml
+<<<<<<< HEAD
 *.meta
 *.xml
+=======
+*.pyc
+>>>>>>> 8169234d40874ddc9773e46b9dd287bfc6aa8bfc
 *.xml
