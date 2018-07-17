@@ -17,5 +17,11 @@
 *.xml
 *.xml
 *.pyc
+<<<<<<< HEAD
 *.iml
 *.xml
+=======
+*.pyc
+*.pyc
+*.pyc
+>>>>>>> develope
