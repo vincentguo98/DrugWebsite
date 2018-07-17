@@ -56,12 +56,12 @@
     </div>
     <div class="row btn-group container">
         <div class="srhbyid col-md-offset-4 col-md-1">
-            <button class="btn-success btn-lg byidb" value="1">
-                by DrugID
+            <button class="btn-success btn-lg byidb" value="1" id="4">
+                DrugBank
             </button>
         </div>
         <div class="srhbyname col-md-offset-1 col-md-1">
-            <button class="btn-success btn-lg byidb" value="1">
+            <button class="btn-success btn-lg byidb" value="1" id="2">
                 by Name
             </button>
         </div>
@@ -75,29 +75,21 @@
     <div class="container-fluid">
     <div class="row srcbyid-d  srcdown col-md-offset-1 col-md-8">
         <br>
-        <div class="col-md-offset-3 btn-group">
-            <button class="btn btn-primary opbutton" value="1" id="id-option1">Option 1</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="id-option1-sel" value="1">
+    {% for item2 in drugbank_list %}
+        <div class="col-md-1 btn-group">
+            <button class="btn btn-primary opbutton" value="1" id=drugbank_{{ item2.graph_name }}>{{ item2.graph_name }}</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id=drugbank_{{ item2.graph_name }}-sel value="1">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
-
-                {% for item in name %}
-                    <li class="minop id-option1-list" value="0" id={{ item.field_item_name }}><a href="#">{{ item.field_item_name }}</a></li>
+                {% for item in item2.graph_name %}
+                    <li class="minop id-option1-list" value="0" id=drugbank_{{ item2.graph_name }}-{{item.field_item_name }}><a href="#" data-stopPropagation="true">{{ item.field_item_name }}</a></li>
                     <script></script>
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-md-offset-1 btn-group">
-            <button class="btn-primary opbutton btn-lg" value="1" id="id-option2">Option 2</button>
-        </div>
-        <div class="col-md-offset-1 btn-group">
-            <button class="btn-primary opbutton btn-lg" value="1" id="id-option3">Option 3</button>
-        </div>
-        <div class="col-md-offset-1 btn-group">
-            <button class="btn-primary opbutton btn-lg" value="1" id="id-option4">Option 4</button>
-        </div>
+    (% endfor %}
         <br>
     </div>
     </div>
@@ -113,7 +105,7 @@
         <br>
     </div>
     </div>
-<div class="container row"><br><div class="col-md-offset-4"><div id="table"></div></div><br></div>
+<div class="container row"><br><div class="table-con"><div id="table"></div></div><br></div>
 </div>
 </div>
 <div style="background-color: #455562;" class="myfooter">

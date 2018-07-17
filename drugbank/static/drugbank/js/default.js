@@ -3,12 +3,12 @@ $(document).ready(function(){
     inittable();
     $(".byidb").click(function () {
         if(this.value === "1"){
-            addlength(70);
+            addlength(1);
             Init2();
             this.value = "0";
         }
         else{
-            addlength(70);
+            addlength(-1);
             Init2();
             this.value = "1";
         }
@@ -105,8 +105,8 @@ function inittable() {
     container = document.getElementById('table');
      var table1 = new Handsontable(container, {
          data: data,
-         width: 720,
-         height:650,
+         width: 0.5*window.innerWidth,
+         height:0.9*window.innerHeight,
          rowHeights: 25,
          colWidths: 60,
         afterSelection: function (row, col, row2, col2) {
@@ -161,8 +161,8 @@ function refreshTable(data) {
     container = document.getElementById('table');
     var table1 = new Handsontable(container, {
         data: datac,
-        width: 720,
-        height:650,
+        width: 0.5*window.innerWidth,
+        height:0.9*window.innerHeight,
         autoRowSize: true,
         afterSelection: function (row, col, row2, col2) {
             var meta = this.getCellMeta(row2, col2);
