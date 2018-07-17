@@ -166,3 +166,7 @@ function markPoint(p) {
 function randomIntFromInterval(mn, mx) {
     return ~~(Math.random() * (mx - mn + 1) + mn);
 }
+function addlength(length) {
+    ch = canvas.height = ch + length;
+    cy = ch/2;
+}

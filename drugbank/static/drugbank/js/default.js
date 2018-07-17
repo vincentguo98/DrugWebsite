@@ -3,14 +3,12 @@ $(document).ready(function(){
     inittable();
     $(".byidb").click(function () {
         if(this.value === "1"){
-            ch = canvas.height = ch + 70;
-            cy = ch/2;
+            addlength(70);
             Init2();
             this.value = "0";
         }
         else{
-            ch = canvas.height = ch - 70;
-            cy = ch/2;
+            addlength(70);
             Init2();
             this.value = "1";
         }

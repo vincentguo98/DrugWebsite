@@ -76,8 +76,8 @@
     <div class="row srcbyid-d  srcdown col-md-offset-1 col-md-8">
         <br>
         <div class="col-md-offset-3 btn-group">
-            <button class="btn btn-primary btn-lg opbutton" value="1" id="id-option1">Option 1</button>
-            <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="id-option1-sel" value="1">
+            <button class="btn btn-primary opbutton" value="1" id="id-option1">Option 1</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="id-option1-sel" value="1">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
@@ -85,6 +85,7 @@
 
                 {% for item in name %}
                     <li class="minop id-option1-list" value="0" id={{ item.field_item_name }}><a href="#">{{ item.field_item_name }}</a></li>
+                    <script></script>
                 {% endfor %}
             </ul>
         </div>

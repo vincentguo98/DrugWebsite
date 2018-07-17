@@ -20,12 +20,6 @@ $(document).ready(function () {
             index.splice(i,1);
             console.log(index);
         }
-        drug  = {};
-        console.log(index.length)
-        for (var j = 0;j < index.length;j++){
-            drug["["+ j +"]"] = index[j];
-            console.log(drug)
-        }
         // drug = { "drugindex":index[0]}
         $.ajax({
            type: "post",

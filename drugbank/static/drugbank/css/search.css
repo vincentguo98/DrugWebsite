@@ -21,7 +21,8 @@
 .tablef
 {
     background: transparent;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 1;
 }
 .search2
 {
