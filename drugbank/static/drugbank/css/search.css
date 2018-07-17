@@ -34,3 +34,6 @@ canvas {
     position: absolute;
     z-index: -1;
 }
+.table-con{
+    margin-left: 30%;
+}

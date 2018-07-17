@@ -3,16 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4d3def47-146a-424f-b2db-6646df417950" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/DrugWebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrugWebsite.iml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/DrugWebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrugWebsite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/608bf57f-61c6-4847-bdda-241b1ad1c009.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/608bf57f-61c6-4847-bdda-241b1ad1c009.xml" afterDir="false" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drugbank/static/drugbank/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/drugbank/static/drugbank/css/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drugbank/static/drugbank/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/drugbank/static/drugbank/js/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drugbank/static/drugbank/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/drugbank/static/drugbank/js/default.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drugbank/static/drugbank/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/drugbank/static/drugbank/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/drugbank/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/drugbank/search.html" afterDir="false" />
+<<<<<<< HEAD
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,27 +39,44 @@
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
     <expand>
       <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db" type="e3449647:DbNodeDescriptor" />
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
-        <item name="drugbank_drug" type="e3449647:DbNodeDescriptor" />
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="drugbank_dosage: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="drugbank_enzyme: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -58,6 +85,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.53420806">
       <split-first>
@@ -232,19 +260,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-6">
               <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="91" column="16" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="default.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+=======
+      <file leaf-file-name="default.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/default.css">
           <provider selected="true" editor-type-id="text-editor" />
@@ -255,30 +303,68 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="170" column="14" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="170" selection-end-column="14" />
+=======
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="172" column="38" selection-start-line="172" selection-start-column="38" selection-end-line="172" selection-end-column="38" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/search.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="222">
               <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+=======
+      <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/default.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+=======
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/drugbank/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+<<<<<<< HEAD
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -312,13 +398,24 @@
         <option value="$PROJECT_DIR$/drugbank/migrations/test_database.py" />
         <option value="$PROJECT_DIR$/drugbank/drugdatabase.py" />
         <option value="$PROJECT_DIR$/search_class.py" />
+        <option value="$PROJECT_DIR$/DrugWebsite/urls.py" />
         <option value="$PROJECT_DIR$/DrugWebsite/settings.py" />
         <option value="$PROJECT_DIR$/drugbank/urls.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/templates/drugbank/index.html" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/DrugWebsite/urls.py" />
+=======
+        <option value="$PROJECT_DIR$/drugbank/views.py" />
+        <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/search.js" />
+        <option value="$PROJECT_DIR$/drugbank/static/drugbank/css/search.css" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
         <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/default.js" />
+        <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/background.js" />
+        <option value="$PROJECT_DIR$/drugbank/static/drugbank/css/default.css" />
+        <option value="$PROJECT_DIR$/templates/drugbank/index.html" />
         <option value="$PROJECT_DIR$/templates/drugbank/search.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/search.js" />
         <option value="$PROJECT_DIR$/drugbank/views.py" />
 =======
@@ -329,6 +426,8 @@
         <option value="$PROJECT_DIR$/templates/drugbank/search.html" />
         <option value="$PROJECT_DIR$/drugbank/static/drugbank/js/default.js" />
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
       </list>
     </option>
   </component>
@@ -346,18 +445,24 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1280" />
     <option name="width" value="2560" />
     <option name="height" value="1440" />
 =======
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
+<<<<<<< HEAD
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -430,11 +535,17 @@
   </component>
   <component name="PropertiesComponent">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
 =======
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/王旭杰/Documents/GitHub/DrugWebsite/DrugWebsite/settings.py" />
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/王旭杰/Documents/GitHub/DrugWebsite/DrugWebsite/settings.py" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="db driver&#10;Sqlite (Xerial)" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -539,6 +650,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+<<<<<<< HEAD
     </configuration>
     <configuration name="DrugWebsite" type="Python.DjangoServer" factoryName="Django server">
       <module name="DrugWebsite" />
@@ -562,6 +674,31 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
+=======
+    </configuration>
+    <configuration name="DrugWebsite" type="Python.DjangoServer" factoryName="Django server">
+      <module name="DrugWebsite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
     <list>
       <item itemvalue="Django server.DrugWebsite" />
       <item itemvalue="Python.search_class" />
@@ -593,6 +730,7 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="1280" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -618,16 +756,28 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+=======
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.503125" side_tool="true" weight="0.32933334" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496875" weight="0.32933334" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.28314918" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16601562" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.19375" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28314918" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16601562" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14257812" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -639,8 +789,13 @@
       <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" />
 >>>>>>> 1552c082999bde89143eb9610a16ed21ed75750d
+=======
+      <window_info anchor="bottom" id="Database Console" weight="0.3411602" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -671,15 +826,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+=======
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
+    <entry file="das://table:/303198c2/8540286b-f421-4cf3-ba25-fa97278ea774/main.drugbank" />
+    <entry file="file://$PROJECT_DIR$/drugbank/tests.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -715,12 +875,33 @@
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DrugWebsite/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/models.py" />
+    <entry file="das://table:/303198c2/8540286b-f421-4cf3-ba25-fa97278ea774/main.DRUG" />
+    <entry file="das://table:/303198c2/8540286b-f421-4cf3-ba25-fa97278ea774/main.drugbank" />
+    <entry file="file://$USER_HOME$/Downloads/models.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8540286b-f421-4cf3-ba25-fa97278ea774/console.sql" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_carrier_drug" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_drug" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_enzyme" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_goclassifier" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_mixture" />
+    <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_pathwaydrug" />
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_enzyme_drug" />
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_druginteraction" />
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_dosage" />
+    <entry file="file://$PROJECT_DIR$/drugbank/migrations/0001_initial.py">
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173" />
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
 =======
     <entry file="file://$PROJECT_DIR$/drugbank/models.py">
@@ -771,19 +952,90 @@
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#114#149#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_drug" />
+    <entry file="file://$PROJECT_DIR$/drugbank/migrations/test_database.py" />
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/django/apps/registry.py" />
+    <entry file="file://$PROJECT_DIR$/drugbank/drugdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Drug_DownloadBase/.idea/misc.xml" />
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/search.html" />
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="21" selection-start-line="128" selection-end-line="129" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#114#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="346" selection-start-line="346" selection-end-line="346" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#635#667#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/drugbank/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -824,19 +1076,50 @@
     <entry file="das://table:/303198c2/fbb602f3-5b75-447b-b19b-13514d8758bd/main.drugbank_pathwaydrug" />
 <<<<<<< HEAD
     <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_enzyme_drug">
+=======
+    <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrugWebsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_goclassifier">
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_dosage">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/056e1109-a4f0-433a-b394-2ab66def643f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_snpeffect">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/drugbank/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -950,54 +1233,70 @@
     </entry>
 <<<<<<< HEAD
     <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_druginteraction">
+=======
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_snpadversedrugreaction">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DrugWebsite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_polypeptide">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-2010535109/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="5471" column="89" lean-forward="true" selection-start-line="5471" selection-start-column="89" selection-end-line="5471" selection-end-column="89" />
-          <folding />
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_target_drug">
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_pathway">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_salt">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_target">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://608bf57f-61c6-4847-bdda-241b1ad1c009/schema/main/table/drugbank_synonym">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/03484eaa-a1f4-4c86-929e-4d22f8a85a12/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding>
-            <marker date="1531727298000" expanded="true" signature="28:2645" ph="{...}" />
-            <marker date="1531727298000" expanded="true" signature="632:2645" ph="{...}" />
-            <marker date="1531727298000" expanded="true" signature="2437:2645" ph="{&quot;type&quot;: &quot;post&quot;...}" />
-            <marker date="1531727298000" expanded="true" signature="2643:2645" ph="{...}" />
-            <marker date="1531727298000" expanded="true" signature="5904:5911" ph="{&quot;data&quot;: datac...}" />
-            <marker date="1531727298000" expanded="true" signature="5904:5915" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/303198c2/608bf57f-61c6-4847-bdda-241b1ad1c009/main.drugbank_drug">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search_class.py">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="258">
           <caret line="139" column="20" lean-forward="false" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="36" />
 =======
@@ -1016,31 +1315,38 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="95">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding>
-            <marker date="1531727298000" expanded="true" signature="1139:1278" ph="{...}" />
-          </folding>
+        <state relative-caret-position="560">
+          <caret line="172" column="38" selection-start-line="172" selection-start-column="38" selection-end-line="172" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drugbank/urls.py">
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="114">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="27" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="285">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
+    <entry file="file://$PROJECT_DIR$/drugbank/static/drugbank/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="626">
           <caret line="98" column="9" lean-forward="false" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
@@ -1063,8 +1369,19 @@
 <<<<<<< HEAD
         <state relative-caret-position="136">
           <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+=======
+        <state relative-caret-position="166">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/drugbank/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
           <folding>
-            <element signature="e#114#149#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
 =======
         <state relative-caret-position="19">
@@ -1073,13 +1390,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drugbank/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/drugbank/search.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="212">
           <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+=======
+        <state relative-caret-position="389">
+          <caret line="91" column="16" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+>>>>>>> 292e589b2fbf6bbfefdc67fbbbbc29c7b3b8e20e
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
 =======
         <state relative-caret-position="-6">
