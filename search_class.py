@@ -99,9 +99,13 @@ class Parse(metaclass=ABCMeta):
 
 
 
-class QueryDrug:
+class Querydrugbank:
 	def __init__(self,option):
-		self.option = option
+		self.filter = option.filter
+		self.projection = option.projection
+		self.contains = option.contains
+		self.queryset = []
+		self.querydict = {}
 		
 		
 	def _getQuerySetAll(self):
@@ -109,6 +113,9 @@ class QueryDrug:
 		
 	def setQueryModel(self,modeltype):
 		self.modeltype = modeltype
+		
+	def emmmtodo(self):
+		pass
 	
 	def parse(self):
 		_filter = self.option.filter
@@ -130,20 +137,32 @@ generate option class to feed
 
 
 '''
-		
+
+
+
 class Option_factory:
 	def __init__(self,parse):
-		self.parse = parse
+		self.parse = []
+		self.option = Option()
 	
 	def register(self,parse):
+		if parse not in self.parse:
+			self.parse.append(parse)
+		else:
+			raise Warning("already register a similar parse")
 		self.parse = parse
 		return self.get_option()
 		
 	def get_option(self):
-		option = self.parse.parse()
+		for parse in self.parse:
+			self.option = parse.parse(self.option)
+		return self.option
 		
 		
-		
+class ParseSelector:
+	def __init__(self,request):
+		pass
+	
 		
 		
 		

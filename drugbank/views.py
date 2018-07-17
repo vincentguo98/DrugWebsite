@@ -13,7 +13,6 @@ from django.http import JsonResponse,HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
-option = Option(projection_=["primaryDrugbankId", "name"],order_=["name","primaryDrugbankId"])
 
 
 
@@ -24,12 +23,12 @@ def ProjectionResult(request):
 	druglist = eval(lis)
 	print(lis)
 	option = Option(projection_ = eval(lis))
-	querydrug = QueryDrug(option)
-	querydrug.setQueryModel(Drug)
-	drug = querydrug.parse()
-	print(drug)
-	return JsonResponse(drug)
-
+	# querydrug = QueryDrug(option)
+	# querydrug.setQueryModel(Drug)
+	# drug = querydrug.parse()
+	# print(drug)
+	# return JsonResponse(drug)
+	return HttpResponse("1")
 @csrf_exempt
 def index(request):
 	return render(request,'drugbank/index.html',locals())
@@ -37,9 +36,9 @@ def index(request):
 
 @csrf_exempt
 def search(request):
+	
 	field_name = []
 	for field in Drug._meta.fields:
-		print(field.verbose_name)
 		field_name.append({"field_item_name":field.verbose_name.replace(' ','_')})
 	field_dict = {"name":field_name}
 	return render(request,'drugbank/search.html',context=field_dict)
