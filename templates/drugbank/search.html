@@ -75,21 +75,23 @@
     <div class="container-fluid">
     <div class="row srcbyid-d  srcdown col-md-offset-1 col-md-8">
         <br>
-    {% for item2 in drugbank_list %}
+    {% for table in context %}
+        {% for key,value in table.items %}
         <div class="col-md-1 btn-group">
-            <button class="btn btn-primary opbutton" value="1" id=drugbank_{{ item2.graph_name }}>{{ item2.graph_name }}</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id=drugbank_{{ item2.graph_name }}-sel value="1">
+            <button class="btn btn-primary opbutton" value="1" id=drugbank_{{ key }}>{{ key }}</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id=drugbank_{{ key }}-sel value="1">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
-                {% for item in item2.graph_name %}
-                    <li class="minop id-option1-list" value="0" id=drugbank_{{ item2.graph_name }}-{{item.field_item_name }}><a href="#" data-stopPropagation="true">{{ item.field_item_name }}</a></li>
+                {% for fieldname in value %}
+                    <li class="minop id-option1-list" value="0" id=drugbank_{{ key }}-{{fieldname }}><a href="#" data-stopPropagation="true">{{fieldname }}</a></li>
                     <script></script>
                 {% endfor %}
             </ul>
         </div>
-    (% endfor %}
+            {% endfor %}
+    {% endfor %}
         <br>
     </div>
     </div>

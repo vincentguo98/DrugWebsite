@@ -36,12 +36,37 @@ def index(request):
 
 @csrf_exempt
 def search(request):
-	
+	druglist = [Drug,Pathway,Category,Carrier,Dosage,SnpAdverseDrugReaction,Synonym,SnpEffect,Salt,PathwayDrug,Property,Mixture,Reaction]
+	drugbank_dict = {
+		"Drug":Drug,
+		"Pathway":Pathway,
+		"Category":Category,
+		"Carrier":Carrier,
+		"Dosage":Dosage,
+		"SnpAdverseDrugReaction":SnpAdverseDrugReaction,
+		"Synonym":Synonym,
+		"SnpEffect":SnpEffect,
+		"Salt":Salt,
+		"PathwayDrug":PathwayDrug,
+		"Property":Property,
+		"Mixture":Mixture,
+		"Reaction":Reaction
+	}
 	field_name = []
-	for field in Drug._meta.fields:
-		field_name.append({"field_item_name":field.verbose_name.replace(' ','_')})
-	field_dict = {"name":field_name}
-	return render(request,'drugbank/search.html',context=field_dict)
+	context = []
+	for key,value in drugbank_dict.items():
+		for field in value._meta.fields:
+			field_name.append(field.verbose_name.replace(' ','_'))
+		filed_dict = {key:field_name}
+		field_name = []
+		context.append(filed_dict)
+	dict_example = {"context":context}
+	for table in dict_example["context"]:
+		for key,value in table.items():
+			print(key)
+			for i in value:
+				print(key,'--',i)
+	return render(request,'drugbank/search.html',context={"context":context})
 
 
 
