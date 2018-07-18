@@ -1,4 +1,5 @@
 var index = new Array();
+var datax;
 $(document).ready(function () {
     $(".minop").click(function () {
         console.log(index);
@@ -29,9 +30,10 @@ $(document).ready(function () {
            },
            dataType:"json",
             success:function(data){
+               datax = data;
                console.log(index[0])
                 console.log(data[index[0]]);
-                refreshTable(data,index);
+                refreshTable(datax,index);
             },
             fail: function () {
                 alert("Disconnect!");

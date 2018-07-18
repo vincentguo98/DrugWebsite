@@ -166,11 +166,25 @@ function markPoint(p) {
 function randomIntFromInterval(mn, mx) {
     return ~~(Math.random() * (mx - mn + 1) + mn);
 }
-function addlength(option) {
+function addlength(option,objs) {
+    var obj;
+    if(objs === "srhbyid-b") obj = 4;
+    else if(objs === "srhbyname-b") obj = 1;
+    console.log(obj);
+    console.log(objs);
+    console.log(ch);
+    console.log(window.innerHeight);
+    console.log(option);
     if(option == "1")
-        ch = canvas.height = ch + 0.15*window.innerHeight;
+    {
+        ch = ch + 0.05*obj*window.innerHeight;
+        canvas.height = ch;
+    }
     else
-        ch = canvas.height = ch - 0.15*window.innerHeight;
+    {
+        ch = ch - 0.05*obj*window.innerHeight;
+        canvas.height = ch;
+    }
     console.log(ch);
     cy = ch/2;
 }

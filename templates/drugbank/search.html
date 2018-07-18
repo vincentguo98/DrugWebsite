@@ -55,13 +55,13 @@
         <p class="col-md-offset-3" style="color:#ffffff; font-family: 'Gill Sans MT'; font-size: 3em    ">How to Search?</p>
     </div>
     <div class="row btn-group container">
-        <div class="srhbyid col-md-offset-4 col-md-1">
-            <button class="btn-success btn-lg byidb" value="1" id="4">
+        <div class="col-md-offset-4 col-md-1" id="srhbyid">
+            <button class="btn-success btn-lg byidb" value="1" id="srhbyid-b">
                 DrugBank
             </button>
         </div>
-        <div class="srhbyname col-md-offset-1 col-md-1">
-            <button class="btn-success btn-lg byidb" value="1" id="2">
+        <div class="col-md-offset-1 col-md-1" id="srhbyname">
+            <button class="btn-success btn-lg byidb" value="1" id="srhbyname-b">
                 by Name
             </button>
         </div>
@@ -73,11 +73,11 @@
 <script src={% static "drugbank/js/background.js" %} type="text/javascript"></script>
 <div class="container-fluid tablef">
     <div class="container-fluid">
-    <div class="row srcbyid-d  srcdown col-md-offset-1 col-md-8">
-        <br>
+    <div class="row srcdown col-md-offset-2 col-md-9" id="srhbyid-d">
+        <br><script>var count = 0;</script>
     {% for table in context %}
         {% for key,value in table.items %}
-        <div class="col-md-1 btn-group">
+        <div class="col-md-3 btn-group" id=drugbank_{{ key }}-div>
             <button class="btn btn-primary opbutton" value="1" id=drugbank_{{ key }}>{{ key }}</button>
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id=drugbank_{{ key }}-sel value="1">
                 <span class="caret"></span>
@@ -85,10 +85,14 @@
             </button>
             <ul class="dropdown-menu">
                 {% for fieldname in value %}
-                    <li class="minop id-option1-list" value="0" id=drugbank_{{ key }}-{{fieldname }}><a href="#" data-stopPropagation="true">{{fieldname }}</a></li>
-                    <script></script>
+                    <li class="minop drugbank_{{ key }}-list" value="0" id=drugbank_{{ key }}-{{fieldname }}><a href="#" data-stopPropagation="true">{{fieldname }}</a></li>
                 {% endfor %}
             </ul>
+        <script>
+            count++;
+            if(count === 4) {
+                count = 0; document.write("<br><br>");
+            }</script>
         </div>
             {% endfor %}
     {% endfor %}
@@ -96,13 +100,21 @@
     </div>
     </div>
     <div class="container-fluid">
-    <div class="row srcbyname-d  srcdown col-md-offset-1 col-md-8">
+    <div class="row srcdown col-md-offset-2 col-md-9" id="srhbyname-d">
         <br>
-        <div class="col-md-offset-3 btn-group">
-            <button class="btn-primary opbutton btn-lg" value="1" id="name-option1">Option 1</button>
+        <div class="col-md-3 btn-group">
+            <button class="btn btn-primary opbutton" value="1" id="option1">Option 1</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="option1-sel" value="1">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
         </div>
-        <div class="col-md-offset-1 btn-group">
-            <button class="btn-primary opbutton btn-lg" value="1" id="name-option2">Option 2</button>
+        <div class="col-md-3 btn-group">
+            <button class="btn btn-primary opbutton" value="1" id="option2">Option 2</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="option2-sel" value="1">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
         </div>
         <br>
     </div>

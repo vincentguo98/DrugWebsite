@@ -3,21 +3,21 @@ $(document).ready(function(){
     inittable();
     $(".byidb").click(function () {
         if(this.value === "1"){
-            addlength(1);
+            addlength(1,this.id);
             Init2();
             this.value = "0";
         }
         else{
-            addlength(-1);
+            addlength(-1,this.id);
             Init2();
             this.value = "1";
         }
     });
-    $(".srhbyid").click(function(){
-        $(".srcbyid-d").slideToggle("fast");
+    $("#srhbyid").click(function(){
+        $("#srhbyid-d").slideToggle("fast");
     });
-    $(".srhbyname").click(function(){
-        $(".srcbyname-d").slideToggle("fast");
+    $("#srhbyname").click(function(){
+        $("#srhbyname-d").slideToggle("fast");
     });
     $(".opbutton").click(function () {
         var id = this.id
@@ -89,6 +89,18 @@ $(document).ready(function(){
     });
 });
 
+function delNrows(data) {
+        var selection = table.getSelected();
+        var col = selection[0][1];
+        console.log(col);
+        for(i = 0,len = data.length;i < len;i++){
+            if(data[i][col] === ""){
+                index.splice(i,1);
+            }
+        }
+        refreshTable(data);
+    }
+
 function inittable() {
     var data = [
             ["","","","","","","","","","","",""],
@@ -103,9 +115,9 @@ function inittable() {
     }
 
     container = document.getElementById('table');
-     var table1 = new Handsontable(container, {
+     var table = new Handsontable(container, {
          data: data,
-         width: 0.5*window.innerWidth,
+         width: 0.6*window.innerWidth,
          height:0.9*window.innerHeight,
          rowHeights: 25,
          colWidths: 60,
@@ -118,7 +130,7 @@ function inittable() {
             else {
                 this.updateSettings({fillHandle: true});
             }
-        },
+            },
         cells: function (row, col) {
             var cellProperties = {};
             var data = this.instance.getData();
@@ -128,12 +140,25 @@ function inittable() {
             }
             return cellProperties;
         },
-         minCols: 15,
+         minCols: 20,
          minRows: 30,
          maxCols: 20,
          maxRows: 1000,
          readOnly: true,
          manualColumnFreeze: true,
+         contextMenu:{
+             callback: function (key,selection,clickEvent) {
+                 console.log(clickEvent);
+             },
+             items:{
+                 "about":{
+                     name:'Delete Null Rows',
+                     callback: function(){
+                         setTimeout(delNrows(data),0);
+                     }
+                 }
+             }
+         },
     });
 }
 function refreshTable(data) {
@@ -161,7 +186,7 @@ function refreshTable(data) {
     container = document.getElementById('table');
     var table1 = new Handsontable(container, {
         data: datac,
-        width: 0.5*window.innerWidth,
+        width: window.innerWidth,
         height:0.9*window.innerHeight,
         autoRowSize: true,
         afterSelection: function (row, col, row2, col2) {
@@ -183,11 +208,21 @@ function refreshTable(data) {
             }
             return cellProperties;
         },
-        //  minCols: 12,
-        // minRows: 20,
         readOnly: true,
         manualColumnFreeze: true,
         autoInsertRow:true,
-         // minSpareCols: 18,
+        contextMenu:{
+             callback: function (key,selection,clickEvent) {
+                 console.log(clickEvent);
+             },
+             items:{
+                 "about":{
+                     name:'Delete Null Rows',
+                     callback: function(){
+                         setTimeout(delNrows(datac),0);
+                     }
+                 }
+             }
+         },
     });
 }
