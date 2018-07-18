@@ -160,7 +160,7 @@ class Querydrugbank:
 				continue
 			else:
 				self.Sql_Default_Where += "drugbank_drug.primaryDrugbankId="+sql+".drug_id"+" AND "
-		self.Sql_Default_Where = self.Sql_Default_Where[:-4]
+		self.Sql_Default_Where = self.Sql_Default_Where[:-4 ]
 		return " "+self.Sql_Default_Where+" "
 	
 	def Sql_Constrctor(self):
