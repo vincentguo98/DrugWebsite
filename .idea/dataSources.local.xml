@@ -8,17 +8,16 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:main</introspection-schemas>
     </data-source>
-    <data-source name="db" uuid="608bf57f-61c6-4847-bdda-241b1ad1c009">
-      <database-info product="SQLite" version="3.20.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.20.1.1" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
-    </data-source>
     <data-source name="identifier.sqlite" uuid="056e1109-a4f0-433a-b394-2ab66def643f">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
     <data-source name="db driver - identifier.sqlite" uuid="03484eaa-a1f4-4c86-929e-4d22f8a85a12">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="db [2]" uuid="23bd7b67-2731-4730-9c75-2968365715a5">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <introspection-schemas>*:main</introspection-schemas>
     </data-source>
   </component>
 </project>
