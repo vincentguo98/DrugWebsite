@@ -30,10 +30,10 @@ $(document).ready(function () {
            },
            dataType:"json",
             success:function(data){
-               datax = data;
+                datax = reversedata(data);
                console.log(index[0])
                 console.log(data[index[0]]);
-                refreshTable(datax,index);
+                refreshTable(datax);
             },
             fail: function () {
                 alert("Disconnect!");

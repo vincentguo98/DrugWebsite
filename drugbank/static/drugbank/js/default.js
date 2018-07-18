@@ -78,7 +78,8 @@ $(document).ready(function(){
            },
            dataType:"json",
             success:function(data){
-                refreshTable(data,index);
+               datax = reversedata(data);
+                refreshTable(datax);
             },
             fail: function () {
                 alert("Disconnect!");
@@ -89,23 +90,34 @@ $(document).ready(function(){
     });
 });
 
-function delNrows(data) {
+function delNrows(data,table) {
         var selection = table.getSelected();
         var col = selection[0][1];
         console.log(col);
-        for(i = 0,len = data.length;i < len;i++){
+        console.log(data.length);
+        for(i = 0;i < data.length;i++){
+            console.log(data[i][col]);
             if(data[i][col] === ""){
-                index.splice(i,1);
+                data.splice(i,1);
+                i--;
             }
+            console.log(data[i]);
+            console.log(data);
         }
         refreshTable(data);
     }
 
 function inittable() {
-    var data = [
-            ["","","","","","","","","","","",""],
+    var datac = [
+            ["1","1","1","1","1","1","1","","1","1","1","1"],
+            ["1","1","1","1","1","1","1","1","1","1","1","1"],
+            ["1","1","1","1","1","","1","1","1","1","1","1"],
+            ["1","1","1","1","1","1","1","1","1","1","1","1"],
+            ["","1","1","1","1","1","1","1","","1","1","1"],
+            ["","1","1","1","1","1","1","1","1","1","1","1"],
         ],
         container;
+    datax = datac;
 
     function firstRowRenderer(instance, td, row, col, prop, value, cellProperties) {
         Handsontable.renderers.TextRenderer.apply(this, arguments);
@@ -116,7 +128,7 @@ function inittable() {
 
     container = document.getElementById('table');
      var table = new Handsontable(container, {
-         data: data,
+         data: datac,
          width: 0.6*window.innerWidth,
          height:0.9*window.innerHeight,
          rowHeights: 25,
@@ -154,7 +166,7 @@ function inittable() {
                  "about":{
                      name:'Delete Null Rows',
                      callback: function(){
-                         setTimeout(delNrows(data),0);
+                         setTimeout(delNrows(datac,table),0);
                      }
                  }
              }
@@ -162,19 +174,7 @@ function inittable() {
     });
 }
 function refreshTable(data) {
-    var container,datac = new Array();
-    for( k = 0,klen = data[index[0]].length+1;k<klen;k++)
-        datac[k] = new Array();
-    datac[0] = index;
-    console.log(data[0]);
-    console.log(data[index[0]][0]);
-    console.log(data[index[0]].length);
-    for(j = 0,len=index.length; j < len; j++)
-        for(i = 1,ilen = data[index[0]].length+1;i < ilen;i++)
-            datac[i].push(data[index[j]][i]);
-
-    console.log(datac);
-    console.log(datac[0].length);
+    var container,datac = data;
 
     function firstRowRenderer(instance, td, row, col, prop, value, cellProperties) {
         Handsontable.renderers.TextRenderer.apply(this, arguments);
@@ -184,7 +184,7 @@ function refreshTable(data) {
     }
 
     container = document.getElementById('table');
-    var table1 = new Handsontable(container, {
+    var table = new Handsontable(container, {
         data: datac,
         width: window.innerWidth,
         height:0.9*window.innerHeight,
@@ -219,10 +219,23 @@ function refreshTable(data) {
                  "about":{
                      name:'Delete Null Rows',
                      callback: function(){
-                         setTimeout(delNrows(datac),0);
+                         setTimeout(delNrows(datac,table),0);
                      }
                  }
              }
          },
     });
+}
+function reversedata(data) {
+    var datac = new Array();
+    for( k = 0,klen = data[index[0]].length+1;k<klen;k++)
+        datac[k] = new Array();
+    datac[0] = index;
+    console.log(data[0]);
+    console.log(data[index[0]][0]);
+    console.log(data[index[0]].length);
+    for(j = 0,len=index.length; j < len; j++)
+        for(i = 1,ilen = data[index[0]].length+1;i < ilen;i++)
+            datac[i].push(data[index[j]][i]);
+    return datac;
 }
