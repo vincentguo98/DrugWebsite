@@ -1,3 +1,4 @@
+var tablex;
 $(document).ready(function(){
     //var state = true;
     inittable();
@@ -90,31 +91,26 @@ $(document).ready(function(){
     });
 });
 
-function delNrows(data,table) {
-        var selection = table.getSelected();
+function delNrows() {
+        var selection = tablex.getSelected();
         var col = selection[0][1];
         console.log(col);
-        console.log(data.length);
-        for(i = 0;i < data.length;i++){
-            console.log(data[i][col]);
-            if(data[i][col] === ""){
-                data.splice(i,1);
+        console.log(datax.length);
+        for(i = 0;i < datax.length;i++){
+            console.log(datax[i][col]);
+            if(datax[i][col] === ""){
+                datax.splice(i,1);
                 i--;
             }
-            console.log(data[i]);
-            console.log(data);
+            console.log(datax[i]);
+            console.log(datax);
         }
-        refreshTable(data);
+        refreshTable(datax);
     }
 
 function inittable() {
     var datac = [
-            ["1","1","1","1","1","1","1","","1","1","1","1"],
-            ["1","1","1","1","1","1","1","1","1","1","1","1"],
-            ["1","1","1","1","1","","1","1","1","1","1","1"],
-            ["1","1","1","1","1","1","1","1","1","1","1","1"],
-            ["","1","1","1","1","1","1","1","","1","1","1"],
-            ["","1","1","1","1","1","1","1","1","1","1","1"],
+            [""],
         ],
         container;
     datax = datac;
@@ -166,12 +162,13 @@ function inittable() {
                  "about":{
                      name:'Delete Null Rows',
                      callback: function(){
-                         setTimeout(delNrows(datac,table),0);
+                         setTimeout(delNrows(),0);
                      }
                  }
              }
          },
     });
+     tablex = table;
 }
 function refreshTable(data) {
     var container,datac = data;
@@ -186,7 +183,7 @@ function refreshTable(data) {
     container = document.getElementById('table');
     var table = new Handsontable(container, {
         data: datac,
-        width: window.innerWidth,
+        width: 0.6*window.innerWidth,
         height:0.9*window.innerHeight,
         autoRowSize: true,
         afterSelection: function (row, col, row2, col2) {
@@ -211,31 +208,23 @@ function refreshTable(data) {
         readOnly: true,
         manualColumnFreeze: true,
         autoInsertRow:true,
-        contextMenu:{
-             callback: function (key,selection,clickEvent) {
-                 console.log(clickEvent);
-             },
-             items:{
-                 "about":{
-                     name:'Delete Null Rows',
-                     callback: function(){
-                         setTimeout(delNrows(datac,table),0);
-                     }
-                 }
-             }
-         },
     });
+    tablex = table;
 }
 function reversedata(data) {
+    var keys = new Array();
+    for(var key in data){
+        keys.push(key);
+        console.log(keys);
+    }
     var datac = new Array();
-    for( k = 0,klen = data[index[0]].length+1;k<klen;k++)
+    for( k = 0,klen = data[keys[0]].length+1;k<klen;k++)
         datac[k] = new Array();
-    datac[0] = index;
-    console.log(data[0]);
-    console.log(data[index[0]][0]);
-    console.log(data[index[0]].length);
-    for(j = 0,len=index.length; j < len; j++)
-        for(i = 1,ilen = data[index[0]].length+1;i < ilen;i++)
-            datac[i].push(data[index[j]][i]);
+    datac[0] = keys;
+    console.log(data[keys[0]][0]);
+    console.log(data[keys[0]].length);
+    for(j = 0,len=keys.length; j < len; j++)
+        for(i = 1,ilen = data[keys[0]].length+1;i < ilen;i++)
+            datac[i].push(data[keys[j]][i]);
     return datac;
 }
