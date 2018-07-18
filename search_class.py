@@ -164,7 +164,9 @@ class Querydrugbank:
         return " " + self.Sql_Default_Where + " "
 
     def Sql_Constrctor(self):
-        sql = "select" + self.Sql_Projection_generator + "from" + self.Sql_From_generator + "where" + self.Sql_Default_Where_generator
+        sql = "select" + self.Sql_Projection_generator + "from" + self.Sql_From_generator
+        if self.Sql_Default_Where_generator != "  ":
+            sql +=  "where" + self.Sql_Default_Where_generator
         Querydrugbank = Drug.objects.raw(sql)
         return Querydrugbank
 
@@ -212,6 +214,8 @@ class Option_factory:
 class ParseSelector:
     def __init__(self, request):
         pass
+
+
 
 
 if __name__ == '__main__':

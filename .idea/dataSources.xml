@@ -10,8 +10,26 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="db" uuid="608bf57f-61c6-4847-bdda-241b1ad1c009">
-      <driver-ref>2420ebe0-f83d-49d9-8d70-90639b33bff8</driver-ref>
+    <data-source source="LOCAL" name="identifier.sqlite" uuid="056e1109-a4f0-433a-b394-2ab66def643f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="db driver - identifier.sqlite" uuid="03484eaa-a1f4-4c86-929e-4d22f8a85a12">
+      <driver-ref>6ea8be89-feaa-465c-8e84-f461a0e8b7d9</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="db [2]" uuid="23bd7b67-2731-4730-9c75-2968365715a5">
+      <driver-ref>6ea8be89-feaa-465c-8e84-f461a0e8b7d9</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
@@ -37,24 +55,6 @@
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license_2.txt</url>
         </library>
       </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="identifier.sqlite" uuid="056e1109-a4f0-433a-b394-2ab66def643f">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="db driver - identifier.sqlite" uuid="03484eaa-a1f4-4c86-929e-4d22f8a85a12">
-      <driver-ref>2420ebe0-f83d-49d9-8d70-90639b33bff8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
     </data-source>
   </component>
 </project>
