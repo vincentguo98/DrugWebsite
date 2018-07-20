@@ -168,23 +168,18 @@ function randomIntFromInterval(mn, mx) {
 }
 function addlength(option,objs) {
     var obj;
-    if(objs === "srhbyid-b") obj = 4;
+    if(objs === "srhbyid-b") obj = 3;
     else if(objs === "srhbyname-b") obj = 1;
-    console.log(obj);
-    console.log(objs);
-    console.log(ch);
-    console.log(window.innerHeight);
-    console.log(option);
+    else if(objs === "srhbykey-b") obj = 1;
     if(option == "1")
     {
-        ch = ch + 0.05*obj*window.innerHeight;
+        ch = ch + 0.08*obj*window.innerHeight;
         canvas.height = ch;
     }
     else
     {
-        ch = ch - 0.05*obj*window.innerHeight;
+        ch = ch - 0.08*obj*window.innerHeight;
         canvas.height = ch;
     }
-    console.log(ch);
     cy = ch/2;
 }

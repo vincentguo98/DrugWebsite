@@ -32,19 +32,27 @@
             </a>
         </div>
         <div class="btn-group navbar-right row">
-            <button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="menu btn btn-primary col-md-offset-0">
                 Browse
             </button>
-            <button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="menu btn btn-primary col-md-offset-0">
                 Search
             </button>
+            <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle menu col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Download
+                <span class="caret"></span>
             </button>
-            <button type="button" class="menu btn btn-primary dropdown-toggle col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <ul class="dropdown-menu">
+                    <li class="mindown" id="csv"><a href="#">.csv</a></li>
+                    <li class="mindown" id="db"><a href="#">.db</a></li>
+                    <li class="mindown" id="txt"><a href="#">.txt</a></li>
+                </ul>
+            </div>
+            <button type="button" class="menu btn btn-primary col-md-offset-0">
                 Help
             </button>
-            <button type="button" class="btn btn-primary dropdown-toggle menu col-md-offset-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-primary menu col-md-offset-0">
                 Contact Us
             </button>
         </div>
@@ -119,6 +127,26 @@
         <br>
     </div>
     </div>
+<div class="container-fluid">
+    <div class="row srcdown col-md-offset-3 col-md-6" id="srhbykey-d">
+        <br>
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="srhbykey-b" value="1">Columns <span class="caret"></span></button>
+                <ul class="dropdown-menu" id="srhbykey-u">
+                    <li class="minkey"><a href="#">Choose Colunms First</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control" placeholder="Keyword" id="srhbykey-i">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="srhbykey-g">Go!</button>
+            </span>
+            <div class="btn-group col-md-offset-1" role="group" id="undo" style="float: left;">
+            <button type="button" class="btn btn-default">Undo Filter</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container row"><br><div class="table-con"><div id="table"></div></div><br></div>
 </div>
 </div>

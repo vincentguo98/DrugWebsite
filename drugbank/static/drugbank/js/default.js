@@ -1,6 +1,5 @@
 var tablex;
 $(document).ready(function(){
-    //var state = true;
     inittable();
     $(".byidb").click(function () {
         if(this.value === "1"){
@@ -22,7 +21,6 @@ $(document).ready(function(){
     });
     $(".opbutton").click(function () {
         var id = this.id
-        console.log(id)
         if(this.value === "1")
         {
             $("#"+id).animate({
@@ -81,32 +79,120 @@ $(document).ready(function(){
             success:function(data){
                datax = reversedata(data);
                 refreshTable(datax);
+                refreshcolunms();
             },
             fail: function () {
                 alert("Disconnect!");
             },
         });
-
-        //state = !state;
+    });
+    $("#srhbykey-g").click(function () {
+        var contain = document.getElementById("srhbykey-b");
+        var selected = contain.innerText;
+        var input = document.getElementById("srhbykey-i");
+        var col = datax[0].indexOf(selected);
+        for(i = 1;i<datax.length-1;i++){
+            if(datax[i][col].indexOf(input.value) === -1){
+                datax.splice(i,1);
+                i--;
+            }
+        }
+        input.value = "";
+        refreshTable(datax);
+    });
+    $("#undo").click(function () {
+        $.ajax({
+           type: "post",
+           url: "/Drug/ProjectionResult/",
+           data:{
+             "drug":JSON.stringify(index)
+           },
+           dataType:"json",
+            success:function(data){
+               datax = reversedata(data);
+                refreshTable(datax);
+                refreshcolunms();
+            },
+            fail: function () {
+                alert("Disconnect!");
+            },
+        });
+        var input = document.getElementById("srhbykey-i");
+        input.value = "";
+    });
+    $(".mindown").click(function () {
+        var format = this.id;
+        console.log(format);
+        var datad = new Array();
+        for(var i=0;i<datax[0].length;i++)
+        {
+            datad[datax[0][i]] = new Array();
+            for(var j=1;j<datax.length-1;j++)
+                datad[datax[0][i]].push(datax[j][i]);
+        }
+            console.log(datad);
+        $.ajax({
+           type: "post",
+           url: "/Drug/ProjectionResult/",
+           data:{
+                "download_content":JSON.stringify(datad),
+                "format_string":format
+           },
+           dataType:"json",
+            success:function(data){
+                alert("Start Download！")
+            },
+            fail: function () {
+                alert("Disconnect!");
+            },
+        });
     });
 });
 
 function delNrows() {
         var selection = tablex.getSelected();
         var col = selection[0][1];
-        console.log(col);
-        console.log(datax.length);
         for(i = 0;i < datax.length;i++){
-            console.log(datax[i][col]);
             if(datax[i][col] === ""){
                 datax.splice(i,1);
                 i--;
             }
-            console.log(datax[i]);
-            console.log(datax);
         }
         refreshTable(datax);
     }
+function refreshcolunms() {
+    var iobj = document.getElementById("srhbykey-b");
+    iobj.innerHTML ="Colunms<span class=\"caret\"></span>";
+    var srhkey_u = document.getElementById("srhbykey-u");
+    srhkey_u.innerHTML = "";
+    for(var col in datax[0])
+    {
+        var li = document.createElement("li");
+        li.setAttribute("class","minkey");
+        li.setAttribute("id",datax[0][col]);
+        li.innerHTML ="<a href=\"#\">" + datax[0][col] + "</a>";
+        srhkey_u.appendChild(li);
+    }
+    $(".minkey").click(function () {
+            var bobj = document.getElementById("srhbykey-b");
+            bobj.innerHTML = this.id + "<span class=\"caret\"></span>";
+    });
+}
+function srhbykey() {
+    var srhkey = document.getElementById("srhbykey-b");
+    if(srhkey.value === "1")
+    {
+        addlength(1,"srhbykey-b");
+        Init2();
+        srhkey.value = "0";
+    }
+    else {
+         addlength(-1,"srhbykey-b");
+        Init2();
+        srhkey.value = "1";
+    }
+     $("#srhbykey-d").slideToggle("fast");
+}
 
 function inittable() {
     var datac = [
@@ -159,13 +245,19 @@ function inittable() {
                  console.log(clickEvent);
              },
              items:{
-                 "about":{
+                 "about1":{
                      name:'Delete Null Rows',
                      callback: function(){
                          setTimeout(delNrows(),0);
                      }
-                 }
-             }
+                 },
+                 "about2":{
+                     name:'Filter by Keywords',
+                     callback: function () {
+                         setTimeout(srhbykey(),0);
+                     }
+                 },
+             },
          },
     });
      tablex = table;
@@ -215,14 +307,11 @@ function reversedata(data) {
     var keys = new Array();
     for(var key in data){
         keys.push(key);
-        console.log(keys);
     }
     var datac = new Array();
     for( k = 0,klen = data[keys[0]].length+1;k<klen;k++)
         datac[k] = new Array();
     datac[0] = keys;
-    console.log(data[keys[0]][0]);
-    console.log(data[keys[0]].length);
     for(j = 0,len=keys.length; j < len; j++)
         for(i = 1,ilen = data[keys[0]].length+1;i < ilen;i++)
             datac[i].push(data[keys[j]][i]);
