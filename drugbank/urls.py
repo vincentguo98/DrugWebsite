@@ -6,5 +6,6 @@ app_name = "drugbank"
 urlpatterns = [
 	url('^ProjectionResult/',views.ProjectionResult,name="ProjectionResult"),
 	url('^index/',views.index,name="index"),
-	url('^search',views.search,name="search")
+	url('^search/',views.search,name="search"),
+	url('^download/',views.DownloadHandler,name="donwload")
 ]

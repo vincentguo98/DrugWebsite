@@ -10,11 +10,10 @@ from django.shortcuts import render
 from drugbank import models
 from search_class import *
 from drugbank.models import *
-from django.http import JsonResponse ,HttpResponse
+from django.http import JsonResponse ,HttpResponse,StreamingHttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from search_class import Option,Querydrugbank
-
 
 
 @csrf_exempt
@@ -22,20 +21,15 @@ def ProjectionResult(request):
 
     lis = request.POST.get("drug")
     print(lis)
+    print(type(lis))
     option_list = [a.replace('-','.') for a in eval(lis)]
     option = Option(projection_=option_list)
     query = Querydrugbank(option)
-    print(query.Sql_Projection_generator)
-    print(query.Sql_From_generator)
-    print(query.Sql_Default_Where_generator)
     drug_result = {}
-
     for i in query.Sql_Constrctor():
         for j in i.__dict__:
             if j != "_state":
                 drug_result[j] = []
-    print(drug_result)
-    
     for i in query.Sql_Constrctor():
         for j in i.__dict__:
             if j != "_state":
@@ -44,10 +38,6 @@ def ProjectionResult(request):
                     drug_result[j].append(eval("i." + j))
                 else:
                     drug_result[j].append("")
-        print(i.__dict__)
-    print(drug_result)
-    for item,value in drug_result.items():
-        print(item + ":" + str(value))
     return JsonResponse(drug_result)
 
 
@@ -89,28 +79,28 @@ def search(request):
         filed_dict = {key :field_name}
         field_name = []
         context.append(filed_dict)
-    # dict_example = {"context" :context}
-    # for table in dict_example["context"]:
-    #     for key ,value in table.items():
-    #         print(key)
-    #         for i in value:
-    #             print(key ,'--' ,i)
     return render(request ,'drugbank/search.html' ,context={"context" :context})
 
 
 
-#
-# if __name__ == '__main__':
-# 	drug = Drug.objects.all()
-# 	drugdict = {}
-# 	druglist = []
-# 	drugorderedlist = []
-# 	for name in option.projection:
-# 		for i in drug:
-# 			print(eval("i."+name))
-# 			druglist.append(eval("i."+name))
-# 		drugdict[name] = druglist
-# 		druglist = []
-# 	print("-"*20)
-# 	for field in Drug._meta.fields:
-# 		print(field.verbose_name)
+
+@csrf_exempt
+def DownloadHandler(request):
+    def file_iterator(filename,chunk_size = 512):
+        with open("drugbank/example.txt") as f:
+            while True:
+                c = f.read(chunk_size)
+                print(c)
+                if c:
+                    yield c
+                else:
+                    break
+    response = StreamingHttpResponse(file_iterator("example.txt"))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="example.txt"'
+    return response
+
+
+
+if __name__ == '__main__':
+    pass
