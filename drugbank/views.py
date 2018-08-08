@@ -48,7 +48,7 @@ def index(request):
 
 
 @csrf_exempt
-def search(request):
+def search_copy(request):
     druglist = [Drug ,Pathway ,Category ,Carrier ,Dosage ,SnpAdverseDrugReaction ,Synonym ,SnpEffect ,Salt ,PathwayDrug
                 ,Property ,Mixture ,Reaction]
     drugbank_dict = {
@@ -79,6 +79,48 @@ def search(request):
         filed_dict = {key :field_name}
         field_name = []
         context.append(filed_dict)
+    return render(request ,'drugbank/search(copy).html' ,context={"context" :context})
+
+@csrf_exempt
+def search(request):
+    # druglist = [Drug ,Pathway ,Category ,Carrier ,Dosage ,SnpAdverseDrugReaction ,Synonym ,SnpEffect ,Salt ,PathwayDrug
+    #             ,Property ,Mixture ,Reaction]
+    # drugbank_dict = {
+    #     "drug" :Drug,
+    #     "pathway" :Pathway,
+    #     "category" :Category,
+    #     "carrier" :Carrier,
+    #     "dosage" :Dosage,
+    #     "snpAdverseDrugReaction" :SnpAdverseDrugReaction,
+    #     "synonym" :Synonym,
+    #     "snpEffect" :SnpEffect,
+    #     "salt" :Salt,
+    #     "pathwaydrug" :PathwayDrug,
+    #     "property" :Property,
+    #     "mixture" :Mixture,
+    #     "reaction" :Reaction
+    # }
+    # field_name = []
+    # context = []
+    # for key ,value in drugbank_dict.items():
+    #     for field in value._meta.fields:
+    #         itemname = field.verbose_name.replace(' ', '_')
+    #         if itemname != "drug":
+    #             field_name.append(itemname)
+    #         else:
+    #             field_name.append(itemname+"_id")
+    #         print(field_name)
+    #     filed_dict = {key :field_name}
+    #     field_name = []
+    #     context.append(filed_dict)
+    druglist = ["drug", "drug type", "drug group"]
+    drug_attr = ["smile", "inchi", "target", "enzyme", "carrier", "transporter", "drug-drug interaction"]
+    drug_type_attr = ["Small Molecule", "Biotech", "All"]
+    drug_group_attr = ["Approved", "Nutraceutical", "Illicit", "Investigational", "Withdrawn", "Experimental"]
+    context = []
+    context.append({"drug": drug_attr})
+    context.append({"drug type": drug_type_attr})
+    context.append({"drug group": drug_group_attr})
     return render(request ,'drugbank/search.html' ,context={"context" :context})
 
 

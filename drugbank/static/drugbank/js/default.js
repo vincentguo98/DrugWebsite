@@ -1,6 +1,6 @@
 var tablex;
 $(document).ready(function(){
-    inittable();
+    //inittable();
     $(".byidb").click(function () {
         if(this.value === "1"){
             addlength(1,this.id);
