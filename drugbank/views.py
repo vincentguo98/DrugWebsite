@@ -7,15 +7,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-from drugbank import models
-from search_class import *
 from drugbank.models import *
 from django.http import JsonResponse ,HttpResponse,StreamingHttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from search_class import Option,Querydrugbank
-
-
+import numpy as np
+import json
+import csv
 @csrf_exempt
 def ProjectionResult(request):
 
@@ -39,6 +38,9 @@ def ProjectionResult(request):
                 else:
                     drug_result[j].append("")
     return JsonResponse(drug_result)
+
+
+
 
 
 
@@ -86,19 +88,83 @@ def search(request):
 
 @csrf_exempt
 def DownloadHandler(request):
-    def file_iterator(filename,chunk_size = 512):
-        with open("drugbank/example.txt") as f:
-            while True:
-                c = f.read(chunk_size)
-                print(c)
-                if c:
-                    yield c
-                else:
-                    break
-    response = StreamingHttpResponse(file_iterator("example.txt"))
+    
+    data = request.POST.get("download_content")
+    data_format = request.POST.get("format_string")
+    data_loaded = json.loads(data)
+    print(data_format)
+    # for json format download ,save as data.json
+    if data_format == "json":
+        with open("drugbank/data.json",'w') as file:
+            json.dump(data_loaded,file)
+        file.close()
+    
+    
+    if data_format == "csv":
+        data_list = []
+        for item in data_loaded:
+            for key,value in item.items():
+                data_list.append(value)
+        print(data_list)
+        data_list = map(list,zip(*data_list))
+        print(data_list)
+        with open('drugbank/data.csv','w') as file:
+            writer = csv.writer(file)
+            writer.writerows(data_list)
+        file.close()
+    
+        
+    if data_format == "txt":
+        data_list = []
+        content = ""
+        for item in data_loaded:
+            for key, value in item.items():
+                data_list.append(value)
+        print(data_list)
+        for row in data_list:
+            for item in row:
+                content+=item+","
+            content = content[:-1] + "\n"
+        with open('drugbank/data.txt','w') as file:
+            file.write(content)
+        file.close()
+    return HttpResponse(data_format)
+
+
+def file_iterator(filename,chunk_size=512):
+    with open(filename,'r') as f:
+        while True:
+            c = f.read(chunk_size)
+            if c:
+                yield c
+            else:
+                break
+
+
+def JsonFileDownload(request):
+    filename = "drugbank/data.json"
+    response = StreamingHttpResponse(file_iterator(filename))
     response['Content-Type'] = 'application/octet-stream'
-    response['Content-Disposition'] = 'attachment;filename="example.txt"'
+    response['Content-Disposition'] = 'attachment;filename="data.json"'
     return response
+    
+def CsvFileDownload(request):
+    filename = "drugbank/data.csv"
+    response = StreamingHttpResponse(file_iterator(filename))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="data.csv"'
+    return response
+
+def TxtFileDownload(request):
+    filename = "drugbank/data.txt"
+    response = StreamingHttpResponse(file_iterator(filename))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="data.txt"'
+    return response
+    
+    
+
+
 
 
 

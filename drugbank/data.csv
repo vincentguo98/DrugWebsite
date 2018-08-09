@@ -1,0 +1,9 @@
+DB00002,Cetuximab,liquid,"Pulmonary Toxicity
+
+Interstitial lung disease (ILD) was reported in 3 of 633 (<0.5%) patients with advanced colorectal cancer receiving cetuximab. Interstitial pneumonitis with non-cardiogenic pulmonary edema resulting in death was reported in one case. Two patients had pre-existing fibrotic lung disease and experienced an acute exacerbation of their disease while receiving cetuximab in combination with irinotecan. In the clinical investigational program, an additional case of interstitial pneumonitis was reported in a patient with head and neck cancer treated with cetuximab and cisplatin. The onset of symptoms occurred between the fourth and eleventh doses of treatment in all reported cases.",<Element 'half-life' at 0x0C2E0720>,drug_action
+DB00006,Bivalirudin,solid,"Based on a study by Gleason et al., the no-observed-adverse-effect level (NOAEL) for bivalirudin, administered to rats via intravenous infusion over a 24-hour period, was 2000 mg/kg/24 h.",<Element 'half-life' at 0x0C877C90>,drug_action
+DB00009,Alteplase,liquid,,<Element 'half-life' at 0x0C2E7930>,drug_action
+DB00013,Urokinase,liquid,,<Element 'half-life' at 0x028F4CF0>,drug_action
+DB00015,Reteplase,liquid,,<Element 'half-life' at 0x0C863E70>,drug_action
+DB00029,Anistreplase,liquid,,<Element 'half-life' at 0x02B34F90>,drug_action
+DB00031,Tenecteplase,liquid,,<Element 'half-life' at 0x02C996F0>,drug_action

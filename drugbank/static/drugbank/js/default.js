@@ -126,21 +126,36 @@ $(document).ready(function(){
         var datad = new Array();
         for(var i=0;i<datax[0].length;i++)
         {
-            datad[datax[0][i]] = new Array();
-            for(var j=1;j<datax.length-1;j++)
-                datad[datax[0][i]].push(datax[j][i]);
+            var list = new Array();
+            for(var j=1;j<datax.length-1;j++) {
+                list.push(datax[j][i]);
+            }
+            var hello = new Object();
+            eval("hello."+datax[0][i]+"=list;");
+            datad.push(hello);
         }
-            console.log(datad);
+        console.log(datad);
+        console.log(JSON.stringify(datad))
         $.ajax({
            type: "post",
-           url: "/Drug/ProjectionResult/",
+           url: "/Drug/download/",
            data:{
                 "download_content":JSON.stringify(datad),
-                "format_string":format
+                "format_string":format,
            },
-           dataType:"json",
+           // dataType:"json",
             success:function(data){
-                alert("Start Download！")
+                alert("Start Download！");
+                if (data == "json"){
+                    window.location.href="../jsonfiledownload";
+                }
+                if (data == "csv"){
+                    window.location.href="../csvfiledownload";
+                }
+                if (data == "txt"){
+                    window.location.href="../txtfiledownload"
+                }
+                console.log("ok")
             },
             fail: function () {
                 alert("Disconnect!");
