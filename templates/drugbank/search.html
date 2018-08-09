@@ -97,7 +97,8 @@
           <div class="row form-group">
             <label class="col-sm-2 control-label"> {{key}}</label>
             <div class="col-sm-10 sandbox-container">
-              <select class="form-control selectpicker" title=" "  id="drugbank-{{ key }}-div" {% ifnotequal key "drug type" %} multiple {% endifnotequal %}>
+              <select class="form-control selectpicker" title=" " id="drugbank-{{ key }}-div" {% ifnotequal key "drug type" %} multiple
+                {% endifnotequal %}>
                 {% for fieldname in value %}
                 <option value="{{forloop}}">{{fieldname }}</option>
                 {% comment %}
@@ -132,7 +133,7 @@
               </select>
             </div>
           </div>
-          
+
           <div class="row form-group" id="drugbank-transporter-div" style="display:none">
             <label class="col-sm-2 control-label"> transporter </label>
             <div class="col-sm-10 sandbox-container">
@@ -146,6 +147,25 @@
             <label class="col-sm-2 control-label"> drug-drug interaction </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row form-group" id="drugbank-fingerprint-div">
+            <label class="col-sm-2 control-label"> fingerprint </label>
+            <label class="col-sm-5 checkbox-inlin sandbox-container">
+              <input type="radio" name="inlineRadioOptions" id="" value="1"> yes
+            </label>
+            <label class="col-sm-5 checkbox-inlin">
+              <input type="radio" name="inlineRadioOptions" id="" value="2"> no
+            </label>
+          </div>
+
+          <div class="row form-group" id="drugbank-download-div">
+            <label class="col-sm-2 control-label"> download format </label>
+            <div class="col-sm-10 sandbox-container">
+              <select class="form-control selectpicker" title="">
                 <option value=""></option>
               </select>
             </div>
