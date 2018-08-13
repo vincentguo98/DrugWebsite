@@ -2,6 +2,12 @@ from django.test import TestCase
 
 # Create your tests here.
 from drugbank.models import *
+from abc import ABCMeta, abstractmethod
+import re
+import os, django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DrugWebsite.settings")
+django.setup()
 
 
 def find_element():

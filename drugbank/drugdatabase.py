@@ -29,24 +29,26 @@ def example():
 
 if __name__ == '__main__':
     # example()
-    option = Option(
-        projection_=["drugbank_drug.alternativeDrugbankId", "drugbank_drug.name", "drugbank_category.category",
-                     "drugbank_salt.unii", "drugbank_drug.unii"])
-    query = Querydrugbank(option)
-    print(query.Sql_Projection_generator)
-    print(query.Sql_From_generator)
-    print(query.Sql_Default_Where_generator)
-    query_set = query.Sql_Constrctor()
-    for i in query_set:
-        for j in i.__dict__:
-            if j != "_state":
-                if eval("i." + j) is not None:
-                    print(j + ":" + eval("i." + j))
-                else:
-                    print(j + ":" + "")
-        # print(j + ":" +eval("i."+j))
-        print("-" * 20)
-
+    # option = Option(
+    #     projection_=["drugbank_drug.alternativeDrugbankId", "drugbank_drug.name", "drugbank_category.category",
+    #                  "drugbank_salt.unii", "drugbank_drug.unii"])
+    # query = Querydrugbank(option)
+    # print(query.Sql_Projection_generator)
+    # print(query.Sql_From_generator)
+    # print(query.Sql_Default_Where_generator)
+    # query_set = query.Sql_Constrctor()
+    # for i in query_set:
+    #     for j in i.__dict__:
+    #         if j != "_state":
+    #             if eval("i." + j) is not None:
+    #                 print(j + ":" + eval("i." + j))
+    #             else:
+    #                 print(j + ":" + "")
+    #     # print(j + ":" +eval("i."+j))
+    #     print("-" * 20)
+    drug_all = Drug.objects.all()
+    for item in drug_all:
+        print(item)
 
 
 
