@@ -113,15 +113,15 @@ def search(request):
     #     filed_dict = {key :field_name}
     #     field_name = []
     #     context.append(filed_dict)
-    druglist = ["drug", "drug type", "drug group"]
+    druglist = {"drug": "drug", "drug-type":"drug type", "drug-group": "drug group"}
     drug_attr = ["smile", "inchi", "target", "enzyme", "carrier", "transporter", "drug-drug interaction"]
     drug_type_attr = ["Small Molecule", "Biotech", "All"]
     drug_group_attr = ["Approved", "Nutraceutical", "Illicit", "Investigational", "Withdrawn", "Experimental","vet_approved"]
     context = []
     context.append({"drug": drug_attr})
-    context.append({"drug type": drug_type_attr})
-    context.append({"drug group": drug_group_attr})
-    return render(request ,'drugbank/search.html' ,context={"context" :context})
+    context.append({"drug-type": drug_type_attr})
+    context.append({"drug-group": drug_group_attr})
+    return render(request ,'drugbank/search.html' ,context={"context" :context, "druglist": druglist})
 
 
 
