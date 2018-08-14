@@ -1,8 +1,8 @@
 
-# import os, django
-#
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DrugWebsite.settings")
-# django.setup()
+import os, django
+import pyprind
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DrugWebsite.settings")
+django.setup()
 
 from django.shortcuts import render
 
@@ -116,7 +116,7 @@ def search(request):
     druglist = ["drug", "drug type", "drug group"]
     drug_attr = ["smile", "inchi", "target", "enzyme", "carrier", "transporter", "drug-drug interaction"]
     drug_type_attr = ["Small Molecule", "Biotech", "All"]
-    drug_group_attr = ["Approved", "Nutraceutical", "Illicit", "Investigational", "Withdrawn", "Experimental"]
+    drug_group_attr = ["Approved", "Nutraceutical", "Illicit", "Investigational", "Withdrawn", "Experimental","vet_approved"]
     context = []
     context.append({"drug": drug_attr})
     context.append({"drug type": drug_type_attr})
@@ -143,5 +143,33 @@ def DownloadHandler(request):
     return response
 
 
-if __name__ == '__main__':
+
+
+# 通过django的反向查询可以将用统一的形式查询，返回queryset
+@csrf_exempt
+def filterResult(request):
     pass
+
+
+
+
+def Test():
+    drug__filterby_smiles = Drug.objects.filter(smiles__isnull=False)
+    drug__filterby_InChi = drug__filterby_smiles.filter(InChI__isnull=False)
+    drug__filterby_targets = drug__filterby_InChi.filter(drug_targets__isnull=False)
+    drug__filterby_enzymes = drug__filterby_targets.filter(drug_enzymes__isnull=False)
+    drug__filterby_carriers = drug__filterby_enzymes.filter(drug_carriers__isnull=False)
+    drug_filterby_all = drug__filterby_InChi.filter(drug_targets__isnull=False,drug_enzymes__isnull=False,drug_carriers__isnull=False,
+                                drug_transporters__isnull=False)
+    print(drug_filterby_all)
+    print(drug__filterby_smiles)
+    print(drug__filterby_InChi)
+    print(drug__filterby_targets)
+    print(drug__filterby_enzymes)
+    print(drug__filterby_carriers)
+    return drug_filterby_all
+
+if __name__ == '__main__':
+    all_drug = Test()
+    # for item in pyprind.prog_bar(all_drug):
+    #     print(item.smiles)

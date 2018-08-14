@@ -504,7 +504,7 @@ class Carrier(models.Model):
 	organism = models.TextField(null=True)
 	action = ListField(null=True)
 	knownAction = models.TextField(null=True)
-	polypeptide = models.OneToOneField(Polypeptide, on_delete=models.DO_NOTHING, null=True, unique=False)
+	polypeptide = models.ForeignKey(Polypeptide, on_delete=models.DO_NOTHING, null=True, unique=False)
 
 
 # 强实体
