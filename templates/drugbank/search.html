@@ -93,21 +93,25 @@
     <div class="container-fluid tablef">
       <div class="container-fluid">
         <div class="row srcdown col-md-offset-2 col-md-9" id="srhbyid-d">
-          <br> {% for table in context %} {% for key,value in table.items %}
-          <div class="row form-group">
-            <label class="col-sm-2 control-label"> {{key}}</label>
-            <div class="col-sm-10 sandbox-container">
-              <select class="form-control selectpicker" title=" " id="drugbank-{{ key }}-div" {% ifnotequal key "drug type" %} multiple
-                {% endifnotequal %}>
-                {% for fieldname in value %}
-                <option value="{{forloop}}">{{fieldname }}</option>
-                {% comment %}
-                <option data-content="<span class='label label-primary'>{{fieldname }}</span>">{{fieldname }}</option> {% endcomment %} {% endfor %}
-              </select>
+          <br>
+          <div class="row">
+            {% for table in context %} {% for key,value in table.items %}
+            <div class="col-sm-4 form-group">
+              <label class="col-sm-2 control-label" id="drugbank-{{ key }}-label"> {{key}}</label>
+              <div class=" col-sm-10 sandbox-container ">
+                <select class="form-control selectpicker " title=" " id="drugbank-{{ key }}-div" {% ifnotequal key "drug-type" %} multiple
+                  {% endifnotequal %}>
+                  {% for fieldname in value %}
+                  <option value="{{forloop}} ">{{fieldname }}</option>
+                  {% comment %}
+                  <option data-content="<span class='label label-primary'>{{fieldname }}</span>">{{fieldname }}</option> {% endcomment %} {% endfor %}
+                </select>
             </div>
           </div>
           {% endfor %}{% endfor %}
-          <div class="row form-group" id="drugbank-target-div" style="display:none">
+        </div>
+        <div class="row">
+          <div class="col-sm-6 form-group" id="drugbank-target-div" style="display:none">
             <label class="col-sm-2 control-label"> target </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
@@ -116,7 +120,7 @@
             </div>
           </div>
 
-          <div class="row form-group" id="drugbank-enzyme-div" style="display:none">
+          <div class="col-sm-6 form-group" id="drugbank-enzyme-div" style="display:none">
             <label class="col-sm-2 control-label"> enzyme </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
@@ -125,7 +129,7 @@
             </div>
           </div>
 
-          <div class="row form-group" id="drugbank-carrier-div" style="display:none">
+          <div class="col-sm-6 form-group" id="drugbank-carrier-div" style="display:none">
             <label class="col-sm-2 control-label"> carrier </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
@@ -134,7 +138,7 @@
             </div>
           </div>
 
-          <div class="row form-group" id="drugbank-transporter-div" style="display:none">
+          <div class="col-sm-6 form-group" id="drugbank-transporter-div" style="display:none">
             <label class="col-sm-2 control-label"> transporter </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
@@ -143,7 +147,7 @@
             </div>
           </div>
 
-          <div class="row form-group" id="drugbank-drug-drug-interaction-div" style="display:none">
+          <div class="col-sm-6 form-group" id="drugbank-drug-drug-interaction-div" style="display:none">
             <label class="col-sm-2 control-label"> drug-drug interaction </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title="" multiple>
@@ -152,17 +156,18 @@
             </div>
           </div>
 
-          <div class="row form-group" id="drugbank-fingerprint-div">
+        </div>
+        <div class="row">
+          <div class="col-sm-6 form-group" id="drugbank-fingerprint-div">
             <label class="col-sm-2 control-label"> fingerprint </label>
-            <label class="col-sm-5 checkbox-inlin sandbox-container">
-              <input type="radio" name="inlineRadioOptions" id="" value="1"> yes
-            </label>
-            <label class="col-sm-5 checkbox-inlin">
-              <input type="radio" name="inlineRadioOptions" id="" value="2"> no
-            </label>
+            <div class="col-sm-10 sandbox-container">
+              <select class="form-control selectpicker" title=" ">
+                <option value="1">yes</option>
+                <option value="2">no</option>
+              </select>
+            </div>
           </div>
-
-          <div class="row form-group" id="drugbank-download-div">
+          <div class="col-sm-6 form-group" id="drugbank-download-div">
             <label class="col-sm-2 control-label"> download format </label>
             <div class="col-sm-10 sandbox-container">
               <select class="form-control selectpicker" title=" ">
@@ -172,114 +177,29 @@
               </select>
             </div>
           </div>
+        </div>
+        <button type="button" class="download btn btn-primary btn-lg btn-block ">Download</button>
 
-
-        </div>
-      </div>
-      {% comment %}
-      <div class="container-fluid">
-        <div class="row srcdown col-md-offset-2 col-md-9" id="srhbyid-d">
-          <br>
-          <script>
-            var count = 0;
-          </script>
-          {% for table in context %} {% for key,value in table.items %}
-          <div class="col-md-3 btn-group" id=drugbank_{{ key }}-div>
-            <button class="btn btn-primary opbutton" value="1" id=drugbank_{{ key }}>{{ key }}</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              id=drugbank_{{ key }}-sel value="1">
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-              {% for fieldname in value %}
-              <li class="minop drugbank_{{ key }}-list" value="0" id=drugbank_{{ key }}-{{fieldname }}>
-                <a href="#" data-stopPropagation="true">{{fieldname }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-            <script>
-              count++;
-              if (count === 4) {
-                count = 0;
-                document.write("<br><br>");
-              }
-            </script>
-          </div>
-          {% endfor %} {% endfor %}
-          <br>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row srcdown col-md-offset-2 col-md-9" id="srhbyname-d">
-          <br>
-          <div class="col-md-3 btn-group">
-            <button class="btn btn-primary opbutton" value="1" id="option1">Option 1</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              id="option1-sel" value="1">
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-          </div>
-          <div class="col-md-3 btn-group">
-            <button class="btn btn-primary opbutton" value="1" id="option2">Option 2</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              id="option2-sel" value="1">
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-          </div>
-          <br>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row srcdown col-md-offset-3 col-md-6" id="srhbykey-d">
-          <br>
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                id="srhbykey-b" value="1">Columns
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="srhbykey-u">
-                <li class="minkey">
-                  <a href="#">Choose Colunms First</a>
-                </li>
-              </ul>
-            </div>
-            <input type="text" class="form-control" placeholder="Keyword" id="srhbykey-i">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" id="srhbykey-g">Go!</button>
-            </span>
-            <div class="btn-group col-md-offset-1" role="group" id="undo" style="float: left;">
-              <button type="button" class="btn btn-default">Undo Filter</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container row">
-        <br>
-        <div class="table-con">
-          <div id="table"></div>
-        </div>
-        <br>
-      </div>
-      {% endcomment %}
-    </div>
-  </div>
-  <div style="background-color: #455562;" class="myfooter">
-    <div class="container">
-      <div class="copyrights">
-        "Copyright 2018"
-        <a href="http://www.bioinfotech.cn" onmouseover="">BBDM Lab</a>
-        ", Web Server developed by Wenzheng Guo, Xujie Wang (Developer), Ruoqi Liu (Designer) and Xiang Yue (Chief)."</br>
-        "Citation: Predicting Drug-Disease Associations by using the Similarity Constrained Matrix Factorization"</br>
-        Contact：Wen Zhang
-        <a href="mailto:zhangwen@whu.edu.cn">zhangwen@whu.edu.cn</a>
       </div>
     </div>
   </div>
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="navbar-inner navbar-content-center">
+      <div style="background-color: #455562;" class="myfooter">
+        <div class="container">
+          <div class="copyrights">
+            "Copyright 2018"
+            <a href="http://www.bioinfotech.cn" onmouseover="">BBDM Lab</a>
+            ", Web Server developed by Wenzheng Guo, Xujie Wang (Developer), Ruoqi Liu (Designer) and Xiang Yue (Chief)."</br>
+            "Citation: Predicting Drug-Disease Associations by using the Similarity Constrained Matrix Factorization"</br>
+            Contact：Wen Zhang
+            <a href="mailto:zhangwen@whu.edu.cn">zhangwen@whu.edu.cn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </body>
 
 </html>
