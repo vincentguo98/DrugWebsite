@@ -8,5 +8,7 @@ urlpatterns = [
 	url('^index/',views.index,name="index"),
 	url('^search/',views.search,name="search"),
     url('^search_copy/',views.search_copy,name="search_copy"),
-	url('^download/',views.DownloadHandler,name="donwload")
+	url('^download/',views.DownloadHandler,name="donwload"),
+	url('^test/',views.test,name='test'),
+	url('^filter/',views.filterResult,name="filter"),
 ]

@@ -1,5 +1,3 @@
-var index = new Array();
-var datax;
 $(document).ready(function () {
     $("#drugbank-drug-type-label").html("drug type");
     $("#drugbank-drug-group-label").html("drug group");
@@ -51,6 +49,15 @@ $(document).ready(function () {
             }
         });
     });
+
+    $("#drugbank-drug-div").val("1");
+    $("#drugbank-drug-type-div").val("3");
+    $("#drugbank-drug-group-div").val("8");
+    $("#drugbank-fingerprint-selector").val("2");
+    $("#drugbank-download-selector").val("1");
+
+
+
     $(".download").on('click', function(){
         cond = {};
         cond.drug = []
@@ -90,10 +97,13 @@ $(document).ready(function () {
         });
         $.ajax({
             type: "post",
-            url: "/test",
+            url: "../filter/",
             data: cond,
+            traditional:true,
             dataType: "json",
             success: function (response) {
+                alert("开始下载");
+                window.location.href = "../download/"
             }
         });
     });

@@ -102,7 +102,7 @@
                 <select class="form-control selectpicker " title=" " id="drugbank-{{ key }}-div" {% ifnotequal key "drug-type" %} multiple
                   {% endifnotequal %}>
                   {% for fieldname in value %}
-                  <option value="{{forloop}} ">{{fieldname }}</option>
+                  <option value="{{forloop.counter}}">{{fieldname }}</option>
                   {% comment %}
                   <option data-content="<span class='label label-primary'>{{fieldname }}</span>">{{fieldname }}</option> {% endcomment %} {% endfor %}
                 </select>
@@ -161,7 +161,7 @@
           <div class="col-sm-6 form-group" id="drugbank-fingerprint-div">
             <label class="col-sm-2 control-label"> fingerprint </label>
             <div class="col-sm-10 sandbox-container">
-              <select class="form-control selectpicker" title=" ">
+              <select class="form-control selectpicker" title=" " id="drugbank-fingerprint-selector">
                 <option value="1">yes</option>
                 <option value="2">no</option>
               </select>
@@ -170,7 +170,7 @@
           <div class="col-sm-6 form-group" id="drugbank-download-div">
             <label class="col-sm-2 control-label"> download format </label>
             <div class="col-sm-10 sandbox-container">
-              <select class="form-control selectpicker" title=" ">
+              <select class="form-control selectpicker" title=" " id="drugbank-download-selector">
                 <option value="1">.csv</option>
                 <option value="2">.db</option>
                 <option value="3">.txt</option>

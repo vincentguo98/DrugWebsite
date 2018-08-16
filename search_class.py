@@ -6,6 +6,10 @@ from drugbank.models import *
 from abc import ABCMeta, abstractmethod
 import re
 import os, django
+import pickle
+import functools
+import copy
+
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DrugWebsite.settings")
 django.setup()
@@ -24,6 +28,26 @@ class ToolKitClass:
         return (para is None)
 
 
+def Name2Field(filename="drugbank/name2dict.pickle"):
+    def Name2IdDecorate(func):
+        with open(filename, 'rb')  as file:
+            name2dict = pickle.load(file)
+        file.close()
+        func_arg = []
+        
+        @functools.wraps(func)
+        def wrapper(self,*args):
+            for index, item in enumerate(args):
+                if item.lower() in name2dict.keys():
+                    func_arg.append(name2dict[item.lower()])
+                else:
+                    func_arg.append(item)
+            return func(self,*tuple(func_arg))
+        
+        return wrapper
+    return Name2IdDecorate
+
+
 '''
 :param
 filter : if value between two numbers
@@ -31,7 +55,6 @@ contains : search strings which contains give items in contains list
 order : specify a display and download sequence
 projection : filter the column you need
 '''
-
 
 # projection should be in this format which is drugbank_drug.name
 class Option:
@@ -214,6 +237,129 @@ class Option_factory:
 class ParseSelector:
     def __init__(self, request):
         pass
+
+
+
+class DrugFilter:
+    
+    def __init__(self):
+        self.queryset = Drug.objects.filter(primaryDrugbankId__isnull=False)
+        
+    
+    @Name2Field()
+    def registerFilter(self,*args):
+        for index,item in enumerate(args):
+            self.queryset = eval("self.queryset."+"filter("+ item +")")
+        return self.queryset
+    
+    
+    
+    
+    def stringContainsFilter(self,**kargs):
+        print(len(self.queryset))
+        for key, value in kargs.items():
+            if value not in ["small molecule","biotech","approved", "nutraceutical", "illicit",
+                           "investigational", "withdrawn", "experimental","vet_approved"]:
+                print("not excuted")
+                continue
+            parameter = str(key)+"__contains"
+            dic = {parameter:value}
+            self.queryset = self.queryset.filter(**dic)
+        return self.queryset
+ 
+ 
+    
+    @Name2Field()
+    def defaultFilter(self,*args):
+        str_values = "primaryDrugbankId"
+        str_values_list = ["primaryDrugbankId"]
+        for index,item in enumerate(args):
+            str = "self.queryset." + "filter(" + item + "__isnull=False" + ")"
+            print(str)
+            self.queryset = eval("self.queryset."+"filter("+ item+"__isnull=False" +")")
+            
+            if item in ["smiles","InChI"]:
+                str_values_list.append(item)
+        self.queryset = self.queryset.values(*tuple(str_values_list)).distinct()
+        disctinct_query = []
+        for item in self.queryset:
+            if item not in disctinct_query:
+                disctinct_query.append(item)
+        self.queryset = Drug.objects.filter(primaryDrugbankId__in=[item["primaryDrugbankId"] for item in disctinct_query])
+        return self.queryset
+    
+    def getQueryset(self):
+        return self.queryset
+    
+
+
+
+
+class DrugDataExtender():
+    
+    def __init__(self,drug_queryset,*args):
+        self.drug_queryset = drug_queryset
+        self.dataset = [[drug,drug.primaryDrugbankId] for drug in self.drug_queryset]
+        
+    def broadcast(self,entity_name):
+        temp = []
+        if entity_name == "target":
+            for inner_list in self.dataset:
+                for entity in inner_list[0].drug_targets.all():
+                    sub_data = copy.deepcopy(inner_list)
+                    sub_data.append(entity.id)
+                    temp.append(sub_data)
+            self.dataset = temp
+            return self
+        
+        if entity_name == "enzyme":
+            for  inner_list in self.dataset:
+                for entity in inner_list[0].drug_enzymes.all():
+                    sub_data = copy.deepcopy(inner_list)
+                    sub_data.append(entity.id)
+                    temp.append(sub_data)
+            self.dataset = temp
+            return self
+            
+        if entity_name == "carrier":
+            for inner_list in self.dataset:
+                for entity in inner_list[0].drug_carriers.all():
+                    sub_data = copy.deepcopy(inner_list)
+                    sub_data.append(entity.id)
+                    temp.append(sub_data)
+            self.dataset = temp
+            return self
+        
+        if entity_name == "transporter":
+            for inner_list in self.dataset:
+                for entity in inner_list[0].drug_transporters.all():
+                    sub_data = copy.deepcopy(inner_list)
+                    sub_data.append(entity.id)
+                    temp.append(sub_data)
+            self.dataset = temp
+            return self
+        
+        if entity_name == "smile":
+            for inner_list in self.dataset:
+                inner_list.append(inner_list[0].smiles)
+            return self
+            
+        if entity_name == "inchi":
+            for inner_list in self.dataset:
+                inner_list.append(inner_list[0].InChI)
+            return self
+        
+        else:
+            print("some error happens")
+            return self
+        
+    def getResult(self):
+        return [inner_list[1:] for inner_list in self.dataset]
+        
+       
+        
+        
+
 
 
 

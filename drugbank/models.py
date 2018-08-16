@@ -391,6 +391,7 @@ class Drug(models.Model):
 	# drugbankId 可以有多个，但是只有一个是primary的。就比如Lepirudin有DB00001\BTD00024\BI0D00024
 	# 三种。具体怎么安排不明，但是primary只有DB00001
 	name = models.TextField()  # type: str
+	type = models.TextField(null=True)
 	# description = models.TextField(null=True)
 	# description = models.TextField(null=True)  # type: str
 	casNumber = models.TextField(null=True)  # type: str

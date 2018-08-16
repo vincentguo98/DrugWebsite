@@ -15,6 +15,9 @@ def find_element():
 	drug_search = drug_all.filter(primaryDrugbankId__contains="1")
 	print(drug_search)
 
+def hello(*args):
+	for item in args:
+		print(args)
 
 if __name__ == '__main__':
-	pass
+	hello("fsdf",2,"fdsf")

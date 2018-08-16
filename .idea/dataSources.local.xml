@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="drugbank_parse@localhost" uuid="a7c7d81c-3efc-4b91-868d-4b06e62aa345">
+    <data-source name="drugbank_parse@localhost" uuid="5e284c7a-b58a-4071-8808-9cd4d49d7f20">
       <database-info product="MySQL" version="5.7.21" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
